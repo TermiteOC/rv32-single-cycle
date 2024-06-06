@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity entidade is
+port ( i_I : in  std_logic;
+       o_O : out std_logic);
+end entidade;
+
+architecture arch_1 of entidade is
+begin
+  process(i_I)
+  begin
+    o_O <= i_I;
+  end process;
+end arch_1;
