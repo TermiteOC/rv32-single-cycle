@@ -1,11 +1,11 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity instruction_memory is										
-  Port (i_CLK  : in  std_logic;							   -- Clock
-        i_ADDR : in  std_logic_vector (31 downto 0);  -- Endereço de memória
-        o_OUT  : out std_logic_vector (31 downto 0)); -- Dados de saída
+  Port ( i_CLK  : in  std_logic;							   -- Clock
+         i_ADDR : in  std_logic_vector (31 downto 0);  -- Endereço de memória
+         o_OUT  : out std_logic_vector (31 downto 0)); -- Dados de saída
 end instruction_memory;
 	
 architecture arq_1 of instruction_memory is

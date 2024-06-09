@@ -6,7 +6,6 @@ entity testbench is
 end testbench;
 
 architecture arch_1 of testbench is
-
   -- Declaracao de Componentes
   component instruction_memory is
   port ( i_CLK    : in  std_logic;
