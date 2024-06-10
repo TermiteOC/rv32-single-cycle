@@ -9,8 +9,8 @@ architecture arch_1 of testbench is
   -- Declaracao de Componentes
   component pc is
   port ( i_CLK  : in  std_logic;
-		 i_D    : in  std_logic_vector(31 downto 0);
-		 o_Q    : out std_logic_vector(31 downto 0));
+		   i_D    : in  std_logic_vector(31 downto 0);
+		   o_Q    : out std_logic_vector(31 downto 0));
   end component;
   
   -- Declaracao de Sinais
@@ -32,12 +32,18 @@ begin
     begin
       w_D   <= "00000000000000000000000000000001";
 		wait for 1 ns;
+		assert (w_S = "00000000000000000000000000000001")
+	   report "Fail @ 000" severity error;
 		
 		w_D   <= "00000000000000000000000000000011";
 		wait for 1 ns;
+		assert (w_S = "00000000000000000000000000000011")
+	   report "Fail @ 001" severity error;
 		
 		w_D   <= "00000000000000000000000000000100";
 		wait for 1 ns;
+		assert (w_S = "00000000000000000000000000000100")
+	   report "Fail @ 002" severity error;
 		
 		-- Clear Inputs
       w_D <= "00000000000000000000000000000000";

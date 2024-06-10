@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Jun 02 23:13:34 2024
+Analysis & Synthesis Status : Successful - Mon Jun 10 00:39:58 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : instruction_memory
 Top-level Entity Name : instruction_memory
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
+Total registers : 12
 Total pins : 65
 Total virtual pins : 0
-Total block memory bits : 8,192
+Total block memory bits : 1,792
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

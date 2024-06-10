@@ -10,22 +10,27 @@ end instruction_memory;
 	
 architecture arq_1 of instruction_memory is
   type t_MEMORY is array (0 to 255) of std_logic_vector (31 downto 0);	-- Cria um tipo memory_array que e um vetor de 256 posicoes que guarda 32 bits em cada uma delas
-  
-  function init_rom
-		return t_MEMORY is 
-		variable tmp : t_MEMORY := (others => (others => '0'));
-	begin 
-		for addr_pos in 0 to 255 loop 
-			-- Initialize each address with the address itself
-			tmp(addr_pos) := std_logic_vector(to_unsigned(addr_pos * 4, 32));
-		end loop;
-		return tmp;
-	end init_rom;
-	
-	signal w_MEM : t_MEMORY := init_rom;			  -- Sinal memory do tipo vetor
-	signal w_RDATA: std_logic_vector(31 downto 0); -- Sinal para armazenar o dado lido do endereço apontado por ADDR
+  signal w_MEM : t_MEMORY := (
+    0 => "00000000010000000000010010010011",
+    1 => "00000000001100000000100100010011",
+    2 => "00000000001000000000100110010011",
+    3 => "00000000000100000000101000010011",
+    4 => "00000001001001001000001010110011",
+    5 => "00000001010010011000001100110011",
+    6 => "01000000011000101000010000110011",
+    others => (others => '0')
+  );
+  signal w_RDATA: std_logic_vector(31 downto 0); -- Sinal para armazenar o dado lido do endereço apontado por ADDR
 	
 begin
+  w_MEM(0) <= "00000000010000000000010010010011";
+  w_MEM(1) <= "00000000001100000000100100010011";
+  w_MEM(2) <= "00000000001000000000100110010011";
+  w_MEM(3) <= "00000000000100000000101000010011";
+  w_MEM(4) <= "00000001001001001000001010110011";
+  w_MEM(5) <= "00000001010010011000001100110011";
+  w_MEM(6) <= "01000000011000101000010000110011";
+  
   process(i_CLK)
   begin
     if rising_edge(i_CLK) then
