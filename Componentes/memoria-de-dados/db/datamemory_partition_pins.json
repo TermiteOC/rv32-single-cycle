@@ -132,11 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_MEMREAD",
+					"name" : "i_MEMWRITE",
 					"strict" : false
 				},
 				{
-					"name" : "i_MEMWRITE",
+					"name" : "i_MEMREAD",
 					"strict" : false
 				},
 				{

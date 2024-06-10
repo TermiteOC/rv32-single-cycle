@@ -32,17 +32,17 @@ begin
     begin
       w_D   <= "00000000000000000000000000000001";
 		wait for 1 ns;
-		assert (w_S = "00000000000000000000000000000001")
+		assert (w_Q = "00000000000000000000000000000001")
 	   report "Fail @ 000" severity error;
 		
 		w_D   <= "00000000000000000000000000000011";
 		wait for 1 ns;
-		assert (w_S = "00000000000000000000000000000011")
+		assert (w_Q = "00000000000000000000000000000011")
 	   report "Fail @ 001" severity error;
 		
 		w_D   <= "00000000000000000000000000000100";
 		wait for 1 ns;
-		assert (w_S = "00000000000000000000000000000100")
+		assert (w_Q = "00000000000000000000000000000100")
 	   report "Fail @ 002" severity error;
 		
 		-- Clear Inputs

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux
-Sun Jun 09 18:26:09 2024
+Mon Jun 10 01:23:27 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 09 18:26:09 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 10 01:23:27 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mux                                         ;
 ; Top-level Entity Name           ; mux                                         ;
@@ -247,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -257,7 +257,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 09 18:25:04 2024
+    Info: Processing started: Mon Jun 10 01:23:00 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux -c mux
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -277,9 +277,9 @@ Info (21057): Implemented 129 device resources after synthesis - the final resou
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Sun Jun 09 18:26:09 2024
-    Info: Elapsed time: 00:01:05
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Mon Jun 10 01:23:27 2024
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:50
 
 

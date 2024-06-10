@@ -1,5 +1,5 @@
 Analysis & Synthesis report for instruction_memory
-Mon Jun 10 00:39:59 2024
+Mon Jun 10 01:20:11 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 10 00:39:58 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 10 01:20:10 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; instruction_memory                          ;
 ; Top-level Entity Name           ; instruction_memory                          ;
@@ -172,24 +172,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
-+------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path               ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                             ; Library ;
-+------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; hdl/instruction_memory.vhd                     ; yes             ; User VHDL File                                        ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd                        ;         ;
-; altsyncram.tdf                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                    ;         ;
-; stratix_ram_block.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                             ;         ;
-; lpm_mux.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                       ;         ;
-; lpm_decode.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                    ;         ;
-; aglobal201.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                                    ;         ;
-; a_rdenreg.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                     ;         ;
-; altrom.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                        ;         ;
-; altram.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                        ;         ;
-; altdpram.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                      ;         ;
-; db/altsyncram_r681.tdf                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/db/altsyncram_r681.tdf                            ;         ;
-; instruction_memory.instruction_memory0.rtl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/db/instruction_memory.instruction_memory0.rtl.mif ;         ;
-+------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/instruction_memory.vhd       ; yes             ; User VHDL File               ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                             ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
+; db/altsyncram_r681.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/db/altsyncram_r681.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -392,7 +391,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:24     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -402,7 +401,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 10 00:38:46 2024
+    Info: Processing started: Mon Jun 10 01:19:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off instruction_memory -c instruction_memory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -481,9 +480,9 @@ Info (21057): Implemented 90 device resources after synthesis - the final resour
     Info (21061): Implemented 18 logic cells
     Info (21064): Implemented 7 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Mon Jun 10 00:39:59 2024
-    Info: Elapsed time: 00:01:13
-    Info: Total CPU time (on all processors): 00:00:56
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Mon Jun 10 01:20:11 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:51
 
 

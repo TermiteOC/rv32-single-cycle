@@ -1,5 +1,5 @@
 Flow report for datamemory
-Sun Jun 09 23:28:10 2024
+Mon Jun 10 01:14:31 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Jun 09 23:28:10 2024       ;
+; Flow Status                     ; Successful - Mon Jun 10 01:14:31 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; datamemory                                  ;
 ; Top-level Entity Name           ; data_memory                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/09/2024 23:26:23 ;
+; Start date & time ; 06/10/2024 01:13:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; datamemory          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073157094848.171798638208908        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073157094848.171799281505628        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; data_memory ; Top        ;
@@ -97,8 +97,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:43     ; 1.0                     ; 4857 MB             ; 00:01:01                           ;
-; Total                ; 00:01:43     ; --                      ; --                  ; 00:01:01                           ;
+; Analysis & Synthesis ; 00:00:52     ; 1.0                     ; 4868 MB             ; 00:00:52                           ;
+; Total                ; 00:00:52     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
