@@ -29,24 +29,25 @@ begin
   w_CLK   <= not w_CLK after c_PERIOD /2;
   
   process
-    begin
-      w_D   <= "00000000000000000000000000000001";
-		wait for 1 ns;
-		assert (w_Q = "00000000000000000000000000000001")
-	   report "Fail @ 000" severity error;
+  begin
+    w_D   <= "00000000000000000000000000000001";
+    wait for 1 ns;
+	 assert (w_Q = "00000000000000000000000000000001")
+	 report "Fail @ 000" severity error;
 		
-		w_D   <= "00000000000000000000000000000011";
-		wait for 1 ns;
-		assert (w_Q = "00000000000000000000000000000011")
-	   report "Fail @ 001" severity error;
+	 w_D   <= "00000000000000000000000000000011";
+	 wait for 1 ns;
+	 assert (w_Q = "00000000000000000000000000000011")
+	 report "Fail @ 001" severity error;
 		
-		w_D   <= "00000000000000000000000000000100";
-		wait for 1 ns;
-		assert (w_Q = "00000000000000000000000000000100")
-	   report "Fail @ 002" severity error;
+	 w_D   <= "00000000000000000000000000000100";
+	 wait for 1 ns;
+	 assert (w_Q = "00000000000000000000000000000100")
+	 report "Fail @ 002" severity error;
 		
-		-- Clear Inputs
-      w_D <= "00000000000000000000000000000000";
-      wait;
+	 -- Clear Inputs
+    w_D <= "00000000000000000000000000000000";
+	 assert false report "Teste concluído com sucesso." severity note;
+    wait;
   end process;
 end arch_1;

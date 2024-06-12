@@ -1,5 +1,5 @@
 Analysis & Synthesis report for datamemory
-Mon Jun 10 01:14:31 2024
+Tue Jun 11 21:09:11 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,15 +13,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Registers Packed Into Inferred Megafunctions
- 11. Source assignments for altsyncram:memory_rtl_0|altsyncram_gdv1:auto_generated
- 12. Parameter Settings for Inferred Entity Instance: altsyncram:memory_rtl_0
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 10 01:14:31 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 11 21:09:10 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; datamemory                                  ;
 ; Top-level Entity Name           ; data_memory                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 99                                          ;
+; Total registers                 ; 16384                                       ;
+; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 16,384                                      ;
+; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -164,81 +159,58 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                   ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                       ; Library ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; hdl/data_memory.vhd                             ; yes             ; User VHDL File                                        ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd                             ;         ;
-; altsyncram.tdf                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                                              ;         ;
-; stratix_ram_block.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                       ;         ;
-; lpm_mux.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                 ;         ;
-; lpm_decode.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                                              ;         ;
-; aglobal201.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                              ;         ;
-; a_rdenreg.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                               ;         ;
-; altrom.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                                  ;         ;
-; altram.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                                  ;         ;
-; altdpram.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                                                ;         ;
-; db/altsyncram_gdv1.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/db/altsyncram_gdv1.tdf                          ;         ;
-; db/datamemory.ram0_data_memory_8ae84398.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/db/datamemory.ram0_data_memory_8ae84398.hdl.mif ;         ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/data_memory.vhd              ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                ;
-;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 0                ;
-;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 0                ;
-;     -- 5 input functions                    ; 0                ;
-;     -- 4 input functions                    ; 0                ;
-;     -- <=3 input functions                  ; 0                ;
-;                                             ;                  ;
-; Dedicated logic registers                   ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 99               ;
-; Total MLAB memory bits                      ; 0                ;
-; Total block memory bits                     ; 16384            ;
-;                                             ;                  ;
-; Total DSP Blocks                            ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; i_MEMWRITE~input ;
-; Maximum fan-out                             ; 32               ;
-; Total fan-out                               ; 547              ;
-; Average fan-out                             ; 2.38             ;
-+---------------------------------------------+------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 11063       ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 6024        ;
+;     -- 7 input functions                    ; 64          ;
+;     -- 6 input functions                    ; 5440        ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 8           ;
+;     -- <=3 input functions                  ; 512         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 16384       ;
+;                                             ;             ;
+; I/O pins                                    ; 98          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; i_CLK~input ;
+; Maximum fan-out                             ; 16384       ;
+; Total fan-out                               ; 83426       ;
+; Average fan-out                             ; 3.69        ;
++---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name     ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
-; |data_memory                           ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 99   ; 0            ; |data_memory                                                        ; data_memory     ; work         ;
-;    |altsyncram:memory_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |data_memory|altsyncram:memory_rtl_0                                ; altsyncram      ; work         ;
-;       |altsyncram_gdv1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |data_memory|altsyncram:memory_rtl_0|altsyncram_gdv1:auto_generated ; altsyncram_gdv1 ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |data_memory               ; 6024 (6024)         ; 16384 (16384)             ; 0                 ; 0          ; 98   ; 0            ; |data_memory        ; data_memory ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
-+-------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------------------------------------------+
-; Name                                                              ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                             ;
-+-------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------------------------------------------+
-; altsyncram:memory_rtl_0|altsyncram_gdv1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; db/datamemory.ram0_data_memory_8ae84398.hdl.mif ;
-+-------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -246,126 +218,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 16384 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16384 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------+
-; Registers Packed Into Inferred Megafunctions ;
-+--------------------+--------------+----------+
-; Register Name      ; Megafunction ; Type     ;
-+--------------------+--------------+----------+
-; w_READ_DATA[0..31] ; memory_rtl_0 ; RAM      ;
-+--------------------+--------------+----------+
-
-
-+-------------------------------------------------------------------------------+
-; Source assignments for altsyncram:memory_rtl_0|altsyncram_gdv1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------+
-; Assignment                      ; Value              ; From ; To              ;
-+---------------------------------+--------------------+------+-----------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -               ;
-+---------------------------------+--------------------+------+-----------------+
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: altsyncram:memory_rtl_0                              ;
-+------------------------------------+-------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                           ; Type           ;
-+------------------------------------+-------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                               ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                              ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                             ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                              ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                             ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                               ; Untyped        ;
-; OPERATION_MODE                     ; DUAL_PORT                                       ; Untyped        ;
-; WIDTH_A                            ; 32                                              ; Untyped        ;
-; WIDTHAD_A                          ; 9                                               ; Untyped        ;
-; NUMWORDS_A                         ; 512                                             ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                                    ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                            ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WIDTH_B                            ; 32                                              ; Untyped        ;
-; WIDTHAD_B                          ; 9                                               ; Untyped        ;
-; NUMWORDS_B                         ; 512                                             ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                          ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                          ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK0                                          ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK0                                          ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                    ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                          ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                               ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                               ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                            ; Untyped        ;
-; BYTE_SIZE                          ; 8                                               ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                        ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; INIT_FILE                          ; db/datamemory.ram0_data_memory_8ae84398.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                          ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                               ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                           ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                           ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                               ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone V                                       ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_gdv1                                 ; Untyped        ;
-+------------------------------------+-------------------------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                    ;
-+-------------------------------------------+-------------------------+
-; Name                                      ; Value                   ;
-+-------------------------------------------+-------------------------+
-; Number of entity instances                ; 1                       ;
-; Entity Instance                           ; altsyncram:memory_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT               ;
-;     -- WIDTH_A                            ; 32                      ;
-;     -- NUMWORDS_A                         ; 512                     ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED            ;
-;     -- WIDTH_B                            ; 32                      ;
-;     -- NUMWORDS_B                         ; 512                     ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                ;
-+-------------------------------------------+-------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+--------------------+--------------------------------+
-; Type               ; Count                          ;
-+--------------------+--------------------------------+
-; boundary_port      ; 99                             ;
-; stratixv_ram_block ; 32                             ;
-;                    ;                                ;
-; Max LUT depth      ; 0.00                           ;
-; Average LUT depth  ; 0.00                           ;
-+--------------------+--------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 16384                       ;
+;     ENA               ; 16384                       ;
+; arriav_lcell_comb     ; 6024                        ;
+;     extend            ; 64                          ;
+;         7 data inputs ; 64                          ;
+;     normal            ; 5960                        ;
+;         2 data inputs ; 512                         ;
+;         4 data inputs ; 8                           ;
+;         6 data inputs ; 5440                        ;
+; boundary_port         ; 98                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.43                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -373,7 +254,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:22     ;
 +----------------+--------------+
 
 
@@ -383,91 +264,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 10 01:13:34 2024
+    Info: Processing started: Tue Jun 11 21:08:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datamemory -c datamemory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/testbench.vhd
-    Info (12022): Found design unit 1: testbench-arch_1 File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 8
-    Info (12023): Found entity 1: testbench File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 5
+    Info (12022): Found design unit 1: testbench-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 8
+    Info (12023): Found entity 1: testbench File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/data_memory.vhd
-    Info (12022): Found design unit 1: data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 16
-    Info (12023): Found entity 1: data_memory File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 5
+    Info (12022): Found design unit 1: data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 13
+    Info (12023): Found entity 1: data_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 5
 Info (12127): Elaborating entity "data_memory" for the top level hierarchy
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "memory_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 9
-        Info (286033): Parameter NUMWORDS_A set to 512
-        Info (286033): Parameter WIDTH_B set to 32
-        Info (286033): Parameter WIDTHAD_B set to 9
-        Info (286033): Parameter NUMWORDS_B set to 512
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/datamemory.ram0_data_memory_8ae84398.hdl.mif
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
-        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
-Info (12130): Elaborated megafunction instantiation "altsyncram:memory_rtl_0"
-Info (12133): Instantiated megafunction "altsyncram:memory_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "9"
-    Info (12134): Parameter "NUMWORDS_A" = "512"
-    Info (12134): Parameter "WIDTH_B" = "32"
-    Info (12134): Parameter "WIDTHAD_B" = "9"
-    Info (12134): Parameter "NUMWORDS_B" = "512"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/datamemory.ram0_data_memory_8ae84398.hdl.mif"
-    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gdv1.tdf
-    Info (12023): Found entity 1: altsyncram_gdv1 File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/db/altsyncram_gdv1.tdf Line: 28
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(26): signal "memory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at data_memory.vhd(26): signal "i_ADDRESS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 26
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 23 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_ADDRESS[9]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[10]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[11]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[12]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[13]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[14]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[15]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[16]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[17]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[18]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[19]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[20]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[21]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[22]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[23]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[24]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[25]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[26]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[27]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[28]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[29]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[30]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-    Warning (15610): No output dependent on input pin "i_ADDRESS[31]" File: C:/Users/Levy/Downloads/Coding/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 10
-Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 67 input pins
+    Warning (15610): No output dependent on input pin "i_ADDRESS[9]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[10]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[11]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[12]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[13]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[14]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[15]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[16]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[17]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[18]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[19]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[20]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[21]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[22]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[23]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[24]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[25]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[26]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[27]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[28]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[29]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[30]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[31]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+Info (21057): Implemented 22506 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
     Info (21059): Implemented 32 output pins
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Mon Jun 10 01:14:32 2024
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:00:53
+    Info (21061): Implemented 22408 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4929 megabytes
+    Info: Processing ended: Tue Jun 11 21:09:11 2024
+    Info: Elapsed time: 00:00:59
+    Info: Total CPU time (on all processors): 00:01:23
 
 

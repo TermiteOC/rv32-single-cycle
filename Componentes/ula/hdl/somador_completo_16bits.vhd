@@ -1,26 +1,26 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
  
 entity somador_completo_16bits is
-port (i_A                : in  std_logic_vector (15 downto 0);  -- entrada A
-	   i_B                : in  std_logic_vector (15 downto 0);  -- entrada B
-      i_CIN              : in  std_logic;                       -- entrada carry in
-      o_COUT             : out std_logic;                       -- saída carry out
-      o_SOMADOR_COMPLETO : out std_logic_vector (15 downto 0)); -- saída resultado
+port ( i_A                : in  std_logic_vector (15 downto 0);  -- entrada A
+	    i_B                : in  std_logic_vector (15 downto 0);  -- entrada B
+       i_CIN              : in  std_logic;                       -- entrada carry in
+       o_COUT             : out std_logic;                       -- saída carry out
+       o_SOMADOR_COMPLETO : out std_logic_vector (15 downto 0)); -- saída resultado
 end somador_completo_16bits;
  
 architecture arq_1 of somador_completo_16bits is
 
-signal w_C1, w_C2, w_C3 : std_logic;
-signal w_B              : std_logic_vector(15 downto 0);
+  signal w_C1, w_C2, w_C3 : std_logic;
+  signal w_B              : std_logic_vector(15 downto 0);
 
-component somador_completo_4bits
-port (i_A                : in  std_logic_vector (3 downto 0);  -- entrada A
-	   i_B                : in  std_logic_vector (3 downto 0);  -- entrada B
-      i_CIN              : in  std_logic;                      -- entrada carry in
-      o_COUT             : out std_logic;                      -- saída carry out
-      o_SOMADOR_COMPLETO : out std_logic_vector (3 downto 0)); -- saída resultado
-end component;
+  component somador_completo_4bits
+  port (i_A                : in  std_logic_vector (3 downto 0);  -- entrada A
+	     i_B                : in  std_logic_vector (3 downto 0);  -- entrada B
+        i_CIN              : in  std_logic;                      -- entrada carry in
+        o_COUT             : out std_logic;                      -- saída carry out
+        o_SOMADOR_COMPLETO : out std_logic_vector (3 downto 0)); -- saída resultado
+  end component;
 
 begin
   u_SOMADOR_COMPLETO0 : somador_completo_4bits port map (i_A                => i_A(3 downto 0), 

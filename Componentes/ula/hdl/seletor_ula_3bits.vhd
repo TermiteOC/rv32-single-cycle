@@ -1,17 +1,17 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 
 entity seletor_ula_3bits is
-port (i_SOMA      : in  std_logic_vector (31 downto 0);  -- entrada resultado soma
-      i_SUBTRAI   : in  std_logic_vector (31 downto 0);  -- entrada resultado subtração
-      i_A_MAIS_UM : in  std_logic_vector (31 downto 0);  -- entrada resultado A+1
-      i_A         : in  std_logic_vector (31 downto 0);  -- entrada resultado A
-      i_AND       : in  std_logic_vector (31 downto 0);  -- entrada resultado and
-      i_OR        : in  std_logic_vector (31 downto 0);  -- entrada resultado or
-      i_XOR       : in  std_logic_vector (31 downto 0);  -- entrada resultado xor
-      i_NOT_A     : in  std_logic_vector (31 downto 0);  -- entrada resultado not A
-	   i_SELETOR   : in  std_logic_vector (2  downto 0);  -- entrada seletor
-      o_RESULTADO : out std_logic_vector (31 downto 0)); -- saída resultado
+port ( i_SOMA      : in  std_logic_vector (31 downto 0);  -- entrada resultado soma
+       i_SUBTRAI   : in  std_logic_vector (31 downto 0);  -- entrada resultado subtração
+       i_A_MAIS_UM : in  std_logic_vector (31 downto 0);  -- entrada resultado A+1
+       i_A         : in  std_logic_vector (31 downto 0);  -- entrada resultado A
+       i_AND       : in  std_logic_vector (31 downto 0);  -- entrada resultado and
+       i_OR        : in  std_logic_vector (31 downto 0);  -- entrada resultado or
+       i_XOR       : in  std_logic_vector (31 downto 0);  -- entrada resultado xor
+       i_NOT_A     : in  std_logic_vector (31 downto 0);  -- entrada resultado not A
+	    i_SELETOR   : in  std_logic_vector (2  downto 0);  -- entrada seletor
+       o_RESULTADO : out std_logic_vector (31 downto 0)); -- saída resultado
 end seletor_ula_3bits;
 
 architecture arq_1 of seletor_ula_3bits is
@@ -37,6 +37,6 @@ begin
         o_RESULTADO <= i_NOT_A;
       when others =>
       	o_RESULTADO <= i_A;
-      end case;
+    end case;
   end process;
 end arq_1;

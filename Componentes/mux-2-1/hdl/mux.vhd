@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity mux is
-  port ( i_SEL : in  std_logic; 
-         i_A	 : in  std_logic_vector(31 downto 0); 
-	      i_B	 : in  std_logic_vector(31 downto 0); 
-         o_OUT : out std_logic_vector(31 downto 0));
+port ( i_SEL : in  std_logic; 
+       i_A	 : in  std_logic_vector(31 downto 0); 
+	    i_B	 : in  std_logic_vector(31 downto 0); 
+       o_OUT : out std_logic_vector(31 downto 0));
 end mux;
 
 architecture arq1 of mux is

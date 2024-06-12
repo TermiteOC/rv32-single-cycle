@@ -1,12 +1,12 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
  
 entity somador_completo_1bit is
-port (i_A                : in  std_logic;  -- entrada A
-	   i_B                : in  std_logic;  -- entrada B
-      i_CIN              : in  std_logic;  -- entrada carry in
-      o_COUT             : out std_logic;  -- saída carry out
-      o_SOMADOR_COMPLETO : out std_logic); -- saída resultado
+port ( i_A                : in  std_logic;  -- entrada A
+	    i_B                : in  std_logic;  -- entrada B
+       i_CIN              : in  std_logic;  -- entrada carry in
+       o_COUT             : out std_logic;  -- saída carry out
+       o_SOMADOR_COMPLETO : out std_logic); -- saída resultado
 end somador_completo_1bit;
  
 architecture arq_1 of somador_completo_1bit is

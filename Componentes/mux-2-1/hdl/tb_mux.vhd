@@ -2,15 +2,14 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity tb_mux is
--- empty
 end tb_mux;
 
 architecture arch_1 of tb_mux is
-  -- DUT component
+  -- DUV component
   component mux is
   port ( i_SEL : in  std_logic; 
-         i_A	 : in  std_logic_vector(31 downto 0); 
-	      i_B	 : in  std_logic_vector(31 downto 0); 
+         i_A	: in  std_logic_vector(31 downto 0); 
+	      i_B	: in  std_logic_vector(31 downto 0); 
          o_OUT : out std_logic_vector(31 downto 0));
   end component;
 
@@ -18,13 +17,13 @@ architecture arch_1 of tb_mux is
   signal w_SEL : std_logic;
   
 begin
-  -- Connect DUT
-  u_DUT: mux port map( i_SEL => w_SEL,
+  -- Connect DUV
+  u_DUV: mux port map( i_SEL => w_SEL,
                        i_A => w_A,
                        i_B => w_B,
                        o_OUT => w_S);
   process
-    begin
+  begin
     w_A   <= "00000000000000000000000000000000";
 	 w_B   <= "11111111111111111111111111111111";
     w_SEL <= '0';
@@ -39,6 +38,8 @@ begin
 	 
     -- Clear inputs
     w_SEL <= '0';
+	 w_A   <= "00000000000000000000000000000000";
+	 w_B   <= "00000000000000000000000000000000";
     assert false report "Test done." severity note;
     wait;
   end process;

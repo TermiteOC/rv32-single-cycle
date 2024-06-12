@@ -1,79 +1,78 @@
-library ieee;
-use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 
 entity ula_32bits is
-port (i_A    : in  std_logic_vector (31 downto 0);  -- entrada A
-      i_B    : in  std_logic_vector (31 downto 0);  -- entrada B
-      i_SEL  : in  std_logic_vector (2  downto 0);  -- seletor de operação
-		o_ZERO : out std_logic;                       -- saída flag zero
-      o_ULA  : out std_logic_vector (31 downto 0)); -- saída resultado
+port ( i_A    : in  std_logic_vector (31 downto 0);  -- entrada A
+       i_B    : in  std_logic_vector (31 downto 0);  -- entrada B
+       i_SEL  : in  std_logic_vector (2  downto 0);  -- seletor de operação
+		 o_ZERO : out std_logic;                       -- saída flag zero
+       o_ULA  : out std_logic_vector (31 downto 0)); -- saída resultado
 end ula_32bits;
 
 architecture arq_1 of ula_32bits is
 
-signal w_0, w_2, w_3, w_4, w_5, w_6, w_7, w_ULA : std_logic_vector (31 downto 0);
-signal w_UNUSED : std_logic;
+  signal w_0, w_2, w_3, w_4, w_5, w_6, w_7, w_ULA : std_logic_vector (31 downto 0);
+  signal w_UNUSED : std_logic;
 
-component soma_subtrai_32bits is
-port (i_A            : in  std_logic_vector (31 downto 0);  -- entrada A
-      i_B            : in  std_logic_vector (31 downto 0);  -- entrada B
-      i_SUBTRAIR     : in  std_logic;                       -- entrada =0 soma normal, =1 faz o complemento de 2 e subtrai
-		o_COUT         : out std_logic;                       -- saída carry out
-      o_SOMA_SUBTRAI : out std_logic_vector (31 downto 0)); -- saída resultado
-end component;
+  component soma_subtrai_32bits is
+  port (i_A            : in  std_logic_vector (31 downto 0);  -- entrada A
+        i_B            : in  std_logic_vector (31 downto 0);  -- entrada B
+        i_SUBTRAIR     : in  std_logic;                       -- entrada =0 soma normal, =1 faz o complemento de 2 e subtrai
+		  o_COUT         : out std_logic;                       -- saída carry out
+        o_SOMA_SUBTRAI : out std_logic_vector (31 downto 0)); -- saída resultado
+  end component;
 
-component somador_completo_32bits is
-port (i_A                : in  std_logic_vector (31 downto 0);  -- entrada A
-	   i_B                : in  std_logic_vector (31 downto 0);  -- entrada B
-      i_CIN              : in  std_logic;                       -- entrada carry in
-      o_COUT             : out std_logic;                       -- saída carry out
-      o_SOMADOR_COMPLETO : out std_logic_vector (31 downto 0)); -- saída resultado
-end component;
+  component somador_completo_32bits is
+  port (i_A                : in  std_logic_vector (31 downto 0);  -- entrada A
+	     i_B                : in  std_logic_vector (31 downto 0);  -- entrada B
+        i_CIN              : in  std_logic;                       -- entrada carry in
+        o_COUT             : out std_logic;                       -- saída carry out
+        o_SOMADOR_COMPLETO : out std_logic_vector (31 downto 0)); -- saída resultado
+  end component;
 
-component a_32bits is
-port (i_A : in  std_logic_vector (31 downto 0);  -- entrada A
-      o_A : out std_logic_vector (31 downto 0)); -- saída resultado a_32bits
-end component;
+  component a_32bits is
+  port (i_A : in  std_logic_vector (31 downto 0);  -- entrada A
+        o_A : out std_logic_vector (31 downto 0)); -- saída resultado a_32bits
+  end component;
 
-component and_32bits is
-port (i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
-	   i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
-      o_AND : out std_logic_vector (31 downto 0)); -- saída resultado and_32bits
-end component;
+  component and_32bits is
+  port (i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
+	     i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
+        o_AND : out std_logic_vector (31 downto 0)); -- saída resultado and_32bits
+  end component;
 
-component or_32bits is
-port (i_A  : in  std_logic_vector (31 downto 0);  -- entrada A
-	   i_B  : in  std_logic_vector (31 downto 0);  -- entrada B
-      o_OR : out std_logic_vector (31 downto 0)); -- saída resultado or_32bits
-end component;
+  component or_32bits is
+  port (i_A  : in  std_logic_vector (31 downto 0);  -- entrada A
+	     i_B  : in  std_logic_vector (31 downto 0);  -- entrada B
+        o_OR : out std_logic_vector (31 downto 0)); -- saída resultado or_32bits
+  end component;
 
-component xor_32bits is
-port (i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
-	   i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
-      o_XOR : out std_logic_vector (31 downto 0)); -- saída resultado xor_32bits
-end component;
+  component xor_32bits is
+  port (i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
+	     i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
+        o_XOR : out std_logic_vector (31 downto 0)); -- saída resultado xor_32bits
+  end component;
 
-component not_a_32bits is
-port (i_A     : in  std_logic_vector (31 downto 0);  -- entrada A
-      o_NOT_A : out std_logic_vector (31 downto 0)); -- saída resultado not_a_32bits
-end component;
+  component not_a_32bits is
+  port (i_A     : in  std_logic_vector (31 downto 0);  -- entrada A
+        o_NOT_A : out std_logic_vector (31 downto 0)); -- saída resultado not_a_32bits
+  end component;
 
-component seletor_ula_3bits is
-port (i_SOMA      : in  std_logic_vector (31 downto 0);  -- entrada resultado soma
-      i_SUBTRAI   : in  std_logic_vector (31 downto 0);  -- entrada resultado subtração
-      i_A_MAIS_UM : in  std_logic_vector (31 downto 0);  -- entrada resultado A+1
-      i_A         : in  std_logic_vector (31 downto 0);  -- entrada resultado A
-      i_AND       : in  std_logic_vector (31 downto 0);  -- entrada resultado and
-      i_OR        : in  std_logic_vector (31 downto 0);  -- entrada resultado or
-      i_XOR       : in  std_logic_vector (31 downto 0);  -- entrada resultado xor
-      i_NOT_A     : in  std_logic_vector (31 downto 0);  -- entrada resultado not A
-	   i_SELETOR   : in  std_logic_vector (2  downto 0);  -- entrada seletor
-      o_RESULTADO : out std_logic_vector (31 downto 0)); -- saída resultado
-end component;
+  component seletor_ula_3bits is
+  port (i_SOMA      : in  std_logic_vector (31 downto 0);  -- entrada resultado soma
+        i_SUBTRAI   : in  std_logic_vector (31 downto 0);  -- entrada resultado subtração
+        i_A_MAIS_UM : in  std_logic_vector (31 downto 0);  -- entrada resultado A+1
+        i_A         : in  std_logic_vector (31 downto 0);  -- entrada resultado A
+        i_AND       : in  std_logic_vector (31 downto 0);  -- entrada resultado and
+        i_OR        : in  std_logic_vector (31 downto 0);  -- entrada resultado or
+        i_XOR       : in  std_logic_vector (31 downto 0);  -- entrada resultado xor
+        i_NOT_A     : in  std_logic_vector (31 downto 0);  -- entrada resultado not A
+	     i_SELETOR   : in  std_logic_vector (2  downto 0);  -- entrada seletor
+        o_RESULTADO : out std_logic_vector (31 downto 0)); -- saída resultado
+  end component;
 
 begin
   -- Instâncias dos componentes
-  
   -- Instância do componente soma_subtrai_32bits
   u_SOMA_SUBTRAI : soma_subtrai_32bits port map (i_A            => i_A,
 																 i_B            => i_B,

@@ -8,13 +8,13 @@ port ( i_CLK  : in std_logic;
 end pc;
 	
 architecture arch_pc of pc is
-	begin
-	process(i_CLK)  										
-		begin 
-			if (rising_edge(i_CLK)) then
-				o_Q <= i_D;
-			end if;
-	end process;
+begin
+  process(i_CLK)  										
+  begin 
+    if (rising_edge(i_CLK)) then
+      o_Q <= i_D;
+	 end if;
+  end process;
 end arch_pc;
 
 
