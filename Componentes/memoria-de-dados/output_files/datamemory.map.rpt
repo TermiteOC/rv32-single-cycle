@@ -1,5 +1,5 @@
 Analysis & Synthesis report for datamemory
-Tue Jun 11 21:09:11 2024
+Thu Jun 13 23:04:50 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 11 21:09:10 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 13 23:04:49 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; datamemory                                  ;
 ; Top-level Entity Name           ; data_memory                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 16384                                       ;
-; Total pins                      ; 98                                          ;
+; Total pins                      ; 99                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -192,13 +192,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 16384       ;
 ;                                             ;             ;
-; I/O pins                                    ; 98          ;
+; I/O pins                                    ; 99          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_CLK~input ;
 ; Maximum fan-out                             ; 16384       ;
-; Total fan-out                               ; 83426       ;
+; Total fan-out                               ; 83427       ;
 ; Average fan-out                             ; 3.69        ;
 +---------------------------------------------+-------------+
 
@@ -208,7 +208,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |data_memory               ; 6024 (6024)         ; 16384 (16384)             ; 0                 ; 0          ; 98   ; 0            ; |data_memory        ; data_memory ; work         ;
+; |data_memory               ; 6024 (6024)         ; 16384 (16384)             ; 0                 ; 0          ; 99   ; 0            ; |data_memory        ; data_memory ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -242,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         2 data inputs ; 512                         ;
 ;         4 data inputs ; 8                           ;
 ;         6 data inputs ; 5440                        ;
-; boundary_port         ; 98                          ;
+; boundary_port         ; 99                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
 ; Average LUT depth     ; 4.43                        ;
@@ -254,7 +254,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:00:29     ;
 +----------------+--------------+
 
 
@@ -264,56 +264,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 11 21:08:12 2024
+    Info: Processing started: Thu Jun 13 23:03:21 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datamemory -c datamemory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/testbench.vhd
-    Info (12022): Found design unit 1: testbench-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 8
-    Info (12023): Found entity 1: testbench File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/testbench.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_data_memory.vhd
+    Info (12022): Found design unit 1: tb_data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/tb_data_memory.vhd Line: 8
+    Info (12023): Found entity 1: tb_data_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/tb_data_memory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/data_memory.vhd
-    Info (12022): Found design unit 1: data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 13
+    Info (12022): Found design unit 1: data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 14
     Info (12023): Found entity 1: data_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 5
 Info (12127): Elaborating entity "data_memory" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at data_memory.vhd(26): signal "memory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at data_memory.vhd(26): signal "i_ADDRESS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 26
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 15
+    Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 23 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_ADDRESS[9]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[10]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[11]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[12]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[13]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[14]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[15]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[16]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[17]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[18]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[19]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[20]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[21]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[22]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[23]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[24]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[25]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[26]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[27]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[28]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[29]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[30]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[31]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-Info (21057): Implemented 22506 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_MEMREAD" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
+    Warning (15610): No output dependent on input pin "i_ADDRESS[9]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[10]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[11]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[12]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[13]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[14]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[15]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[16]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[17]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[18]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[19]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[20]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[21]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[22]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[23]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[24]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[25]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[26]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[27]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[28]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[29]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[30]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[31]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+Info (21057): Implemented 22507 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 22408 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Tue Jun 11 21:09:11 2024
-    Info: Elapsed time: 00:00:59
-    Info: Total CPU time (on all processors): 00:01:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4926 megabytes
+    Info: Processing ended: Thu Jun 13 23:04:51 2024
+    Info: Elapsed time: 00:01:30
+    Info: Total CPU time (on all processors): 00:01:20
 
 

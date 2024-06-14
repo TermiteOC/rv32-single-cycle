@@ -44,6 +44,7 @@ i_CLK => memory~40.CLK
 i_CLK => memory.CLK0
 i_MEMWRITE => memory~41.DATAIN
 i_MEMWRITE => memory.WE
+i_MEMREAD => ~NO_FANOUT~
 i_ADDRESS[0] => memory~8.DATAIN
 i_ADDRESS[0] => memory.WADDR
 i_ADDRESS[0] => memory.RADDR

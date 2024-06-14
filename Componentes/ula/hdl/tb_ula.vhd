@@ -34,63 +34,63 @@ begin
     w_A <= "00000000000000000000000000000000";
     w_B <= "00000000000000000000000000000000";
 	 w_S <= "000"; -- soma e teste zero
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '1' and w_U = "00000000000000000000000000000000")
 	 report "Erro saída zero" severity error;
 
 	 w_A <= "00000000000000000000000000000001";
     w_B <= "00000000000000000000000000000011";
 	 w_S <= "000"; -- soma
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000000100")
 	 report "Erro soma" severity error;
 	 
 	 w_A <= "00000000000000000000000000000100";
     w_B <= "00000000000000000000000000000011";
 	 w_S <= "001"; -- subtrai
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000000001")
 	 report "Erro subtração" severity error;
 	
 	 w_A <= "00000000000000000000000000000100";
     w_B <= "00000000000000000000010000000000";
 	 w_S <= "010"; -- a mais um
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000000101")
 	 report "Erro a mais um" severity error;
 	 
 	 w_A <= "00000000000000000000000000000111";
     w_B <= "00000000000000000000010000000000";
 	 w_S <= "011"; -- a 
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000000111")
 	 report "Erro a" severity error;
 	 
 	 w_A <= "00000000000000000000000000000111";
     w_B <= "00000000000000000000000000000011";
 	 w_S <= "100"; -- and
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000000011")
 	 report "Erro and" severity error;
 	 
 	 w_A <= "00000000000000000000000000000111";
     w_B <= "00000000000000000000000000001011";
 	 w_S <= "101"; -- or
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000001111")
 	 report "Erro or" severity error;
 	 
 	 w_A <= "00000000000000000000000000000111";
     w_B <= "00000000000000000000000000001011";
 	 w_S <= "110"; -- xor
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '0' and w_U = "00000000000000000000000000001100")
 	 report "Erro xor" severity error;
 	 
 	 w_A <= "11111111111111111111111111111111";
     w_B <= "00000000000000000000000111111111";
 	 w_S <= "111"; -- not a
-    wait for 1 ns;
+    wait for 10 ns;
 	 assert(w_Z = '1' and w_U = "00000000000000000000000000000000")
 	 report "Erro not a" severity error;
 	 

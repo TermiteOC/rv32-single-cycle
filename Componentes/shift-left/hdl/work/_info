@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/shift-left/hdl
+Eshift_left
+Z1 w1718333052
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8shift_left.vhd
+Z6 Fshift_left.vhd
+l0
+L5 1
+Vo1>X_c=EILz]LigjbN[>E1
+!s100 =L_YGULD7SKkYHHD11ANm1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1718333935
+!i10b 1
+Z9 !s108 1718333934.000000
+Z10 !s90 -reportprogress|300|shift_left.vhd|tb_shift_left.vhd|
+!s107 tb_shift_left.vhd|shift_left.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 shift_left 0 22 o1>X_c=EILz]LigjbN[>E1
+!i122 0
+l11
+L10 7
+VYabjWZO^oB68a:HV0Hm591
+!s100 <TigJ8PSS7:D=eBX7i2L91
+R7
+32
+R8
+!i10b 1
+R9
+R10
+Z12 !s107 tb_shift_left.vhd|shift_left.vhd|
+!i113 1
+R11
+Etb_shift_left
+Z13 w1718333663
+R2
+R3
+R4
+!i122 0
+R0
+Z14 8tb_shift_left.vhd
+Z15 Ftb_shift_left.vhd
+l0
+L5 1
+V^:b645T79j;E>WH]9[=eV1
+!s100 TU2J12d]34:LDZQ[LDIYV2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R12
+!i113 1
+R11
+Abehavioral
+R2
+R3
+R4
+DEx4 work 13 tb_shift_left 0 22 ^:b645T79j;E>WH]9[=eV1
+!i122 0
+l19
+L8 40
+V=ha@^gb[HO=J1HnRfAD?20
+!s100 =7NeogT6dXgGKURH<`7F71
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R12
+!i113 1
+R11

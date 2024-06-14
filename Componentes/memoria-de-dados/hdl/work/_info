@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl
+Edata_memory
+Z1 w1718329791
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z5 8data_memory.vhd
+Z6 Fdata_memory.vhd
+l0
+L5 1
+VlMdGDQ<fz0bFEi7P1nbGm3
+!s100 ?>W^DWf:6>WHAPAb9>5_b1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1718331048
+!i10b 1
+Z9 !s108 1718331048.000000
+Z10 !s90 -reportprogress|300|data_memory.vhd|tb_data_memory.vhd|
+Z11 !s107 tb_data_memory.vhd|data_memory.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Aarch_1
+R2
+R3
+R4
+Z13 DEx4 work 11 data_memory 0 22 lMdGDQ<fz0bFEi7P1nbGm3
+!i122 2
+l18
+Z14 L14 17
+Z15 V0UOZgN^DNUXkRkCg8iMHP3
+Z16 !s100 oUold=TGoV`8P@I@<=bOD0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Etb_data_memory
+Z17 w1718331042
+R2
+R3
+R4
+!i122 2
+R0
+Z18 8tb_data_memory.vhd
+Z19 Ftb_data_memory.vhd
+l0
+L5 1
+V^_P23ik2<Qe1=_M:7YcX_1
+!s100 =kmenmhDKG[WiOe72V91;1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Aarch_1
+R2
+R3
+R4
+Z20 DEx4 work 14 tb_data_memory 0 22 ^_P23ik2<Qe1=_M:7YcX_1
+!i122 2
+l30
+Z21 L8 77
+VTGogd>b7nAd_V;^KG56[j3
+!s100 ]4^JCIiKi]R8i@6LZJE;32
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12

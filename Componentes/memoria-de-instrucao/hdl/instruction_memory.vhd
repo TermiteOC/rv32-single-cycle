@@ -3,8 +3,8 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity instruction_memory is										
-  Port ( i_ADDR : in  std_logic_vector (31 downto 0);  -- Endereço de memória
-         o_OUT  : out std_logic_vector (31 downto 0)); -- Dados de saída
+port ( i_ADDR : in  std_logic_vector(31 downto 0);  -- Endereço de memória
+       o_OUT  : out std_logic_vector(31 downto 0)); -- Dados de saída
 end instruction_memory;
 	
 architecture arq_1 of instruction_memory is

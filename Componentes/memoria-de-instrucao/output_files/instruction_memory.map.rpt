@@ -1,5 +1,5 @@
 Analysis & Synthesis report for instruction_memory
-Tue Jun 11 22:27:16 2024
+Thu Jun 13 23:16:14 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 11 22:27:16 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 13 23:16:13 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; instruction_memory                          ;
 ; Top-level Entity Name           ; instruction_memory                          ;
@@ -250,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -260,13 +260,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jun 11 22:26:51 2024
+    Info: Processing started: Thu Jun 13 23:15:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off instruction_memory -c instruction_memory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/testbench.vhd
-    Info (12022): Found design unit 1: testbench-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/testbench.vhd Line: 8
-    Info (12023): Found entity 1: testbench File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/testbench.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_instruction_memory.vhd
+    Info (12022): Found design unit 1: tb_instruction_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/tb_instruction_memory.vhd Line: 7
+    Info (12023): Found entity 1: tb_instruction_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/tb_instruction_memory.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/instruction_memory.vhd
     Info (12022): Found design unit 1: instruction_memory-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 10
     Info (12023): Found entity 1: instruction_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 5
@@ -320,9 +320,9 @@ Info (21057): Implemented 87 device resources after synthesis - the final resour
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 23 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Tue Jun 11 22:27:16 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:50
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Thu Jun 13 23:16:14 2024
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:00:56
 
 

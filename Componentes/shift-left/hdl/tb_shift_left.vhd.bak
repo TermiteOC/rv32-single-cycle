@@ -1,0 +1,62 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_shift_left is
+end entity tb_shift_left;
+
+architecture behavioral of tb_shift_left is
+
+    -- Component declaration for the Unit Under Test (UUT)
+    component shift_left
+        port (
+            i_data : in  std_logic_vector(31 downto 0);
+            o_result : out std_logic_vector(31 downto 0)
+        );
+    end component;
+
+    -- Signals for connecting to the UUT
+    signal i_data   : std_logic_vector(31 downto 0) := (others => '0');
+    signal o_result : std_logic_vector(31 downto 0);
+
+begin
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: shift_left
+        port map (
+            i_data   => i_data,
+            o_result => o_result
+        );
+
+    -- Stimulus process
+    stim_proc: process
+    begin
+        -- Test case 1: Simple shift
+        i_data <= x"00000001"; -- 00000000000000000000000000000001
+        wait for 10 ns;
+        assert o_result = x"00000002" -- 00000000000000000000000000000010
+            report "Test case 1 failed" severity error;
+
+        -- Test case 2: Shift with a different value
+        i_data <= x"80000000"; -- 10000000000000000000000000000000
+        wait for 10 ns;
+        assert o_result = x"00000000" -- 00000000000000000000000000000000
+            report "Test case 2 failed" severity error;
+
+        -- Test case 3: Shift with all bits set
+        i_data <= x"FFFFFFFF"; -- 11111111111111111111111111111111
+        wait for 10 ns;
+        assert o_result = x"FFFFFFFE" -- 11111111111111111111111111111110
+            report "Test case 3 failed" severity error;
+
+        -- Test case 4: Shift with alternating bits
+        i_data <= x"AAAAAAAA"; -- 10101010101010101010101010101010
+        wait for 10 ns;
+        assert o_result = x"55555554" -- 01010101010101010101010101010100
+            report "Test case 4 failed" severity error;
+
+        -- End simulation
+        wait;
+    end process;
+
+end architecture behavioral;
