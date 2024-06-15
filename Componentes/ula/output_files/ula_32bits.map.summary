@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Jun 14 00:32:21 2024
+Analysis & Synthesis Status : Successful - Fri Jun 14 22:38:03 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : ula_32bits
-Top-level Entity Name : ula_32bits
+Top-level Entity Name : ula
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 100
+Total pins : 101
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -39,9 +39,9 @@ begin
     assert (w_RESULT = "11111111111111111111111111111110")
     report "Fail @ 003" severity error;
 	 
-	 -- Clear Inputs
-	 w_DATA <= (others => '0');
-	 assert false report "Teste concluído com sucesso." severity note;
+	  -- Clear Inputs
+	  w_DATA <= (others => '0');
+	  assert false report "Teste concluído com sucesso." severity note;
     wait;
   end process;
 end behavioral;

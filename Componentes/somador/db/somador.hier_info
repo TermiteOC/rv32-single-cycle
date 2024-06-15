@@ -1,0 +1,791 @@
+|somador_completo_32bits
+i_A[0] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[0]
+i_A[1] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[1]
+i_A[2] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[2]
+i_A[3] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[3]
+i_A[4] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[4]
+i_A[5] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[5]
+i_A[6] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[6]
+i_A[7] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[7]
+i_A[8] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[8]
+i_A[9] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[9]
+i_A[10] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[10]
+i_A[11] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[11]
+i_A[12] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[12]
+i_A[13] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[13]
+i_A[14] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[14]
+i_A[15] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_A[15]
+i_A[16] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[0]
+i_A[17] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[1]
+i_A[18] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[2]
+i_A[19] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[3]
+i_A[20] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[4]
+i_A[21] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[5]
+i_A[22] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[6]
+i_A[23] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[7]
+i_A[24] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[8]
+i_A[25] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[9]
+i_A[26] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[10]
+i_A[27] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[11]
+i_A[28] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[12]
+i_A[29] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[13]
+i_A[30] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[14]
+i_A[31] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_A[15]
+i_B[0] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[0]
+i_B[1] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[1]
+i_B[2] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[2]
+i_B[3] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[3]
+i_B[4] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[4]
+i_B[5] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[5]
+i_B[6] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[6]
+i_B[7] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[7]
+i_B[8] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[8]
+i_B[9] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[9]
+i_B[10] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[10]
+i_B[11] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[11]
+i_B[12] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[12]
+i_B[13] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[13]
+i_B[14] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[14]
+i_B[15] => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_B[15]
+i_B[16] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[0]
+i_B[17] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[1]
+i_B[18] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[2]
+i_B[19] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[3]
+i_B[20] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[4]
+i_B[21] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[5]
+i_B[22] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[6]
+i_B[23] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[7]
+i_B[24] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[8]
+i_B[25] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[9]
+i_B[26] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[10]
+i_B[27] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[11]
+i_B[28] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[12]
+i_B[29] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[13]
+i_B[30] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[14]
+i_B[31] => somador_completo_16bits:u_SOMADOR_COMPLETO1.i_B[15]
+i_CIN => somador_completo_16bits:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[1] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[2] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[3] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[4] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[4]
+o_SOMADOR_COMPLETO[5] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[5]
+o_SOMADOR_COMPLETO[6] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[6]
+o_SOMADOR_COMPLETO[7] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[7]
+o_SOMADOR_COMPLETO[8] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[8]
+o_SOMADOR_COMPLETO[9] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[9]
+o_SOMADOR_COMPLETO[10] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[10]
+o_SOMADOR_COMPLETO[11] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[11]
+o_SOMADOR_COMPLETO[12] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[12]
+o_SOMADOR_COMPLETO[13] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[13]
+o_SOMADOR_COMPLETO[14] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[14]
+o_SOMADOR_COMPLETO[15] <= somador_completo_16bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[15]
+o_SOMADOR_COMPLETO[16] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[17] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[18] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[19] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[20] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[4]
+o_SOMADOR_COMPLETO[21] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[5]
+o_SOMADOR_COMPLETO[22] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[6]
+o_SOMADOR_COMPLETO[23] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[7]
+o_SOMADOR_COMPLETO[24] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[8]
+o_SOMADOR_COMPLETO[25] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[9]
+o_SOMADOR_COMPLETO[26] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[10]
+o_SOMADOR_COMPLETO[27] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[11]
+o_SOMADOR_COMPLETO[28] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[12]
+o_SOMADOR_COMPLETO[29] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[13]
+o_SOMADOR_COMPLETO[30] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[14]
+o_SOMADOR_COMPLETO[31] <= somador_completo_16bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[15]
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0
+i_A[0] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[0]
+i_A[1] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[1]
+i_A[2] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[2]
+i_A[3] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[3]
+i_A[4] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[0]
+i_A[5] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[1]
+i_A[6] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[2]
+i_A[7] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[3]
+i_A[8] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[0]
+i_A[9] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[1]
+i_A[10] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[2]
+i_A[11] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[3]
+i_A[12] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[0]
+i_A[13] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[1]
+i_A[14] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[2]
+i_A[15] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[3]
+i_B[0] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[0]
+i_B[1] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[1]
+i_B[2] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[2]
+i_B[3] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[3]
+i_B[4] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[0]
+i_B[5] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[1]
+i_B[6] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[2]
+i_B[7] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[3]
+i_B[8] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[0]
+i_B[9] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[1]
+i_B[10] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[2]
+i_B[11] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[3]
+i_B[12] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[0]
+i_B[13] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[1]
+i_B[14] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[2]
+i_B[15] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[3]
+i_CIN => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[1] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[2] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[3] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[4] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[5] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[6] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[7] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[8] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[9] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[10] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[11] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[12] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[13] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[14] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[15] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[3]
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1
+i_A[0] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[0]
+i_A[1] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[1]
+i_A[2] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[2]
+i_A[3] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_A[3]
+i_A[4] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[0]
+i_A[5] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[1]
+i_A[6] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[2]
+i_A[7] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_A[3]
+i_A[8] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[0]
+i_A[9] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[1]
+i_A[10] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[2]
+i_A[11] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_A[3]
+i_A[12] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[0]
+i_A[13] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[1]
+i_A[14] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[2]
+i_A[15] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_A[3]
+i_B[0] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[0]
+i_B[1] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[1]
+i_B[2] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[2]
+i_B[3] => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_B[3]
+i_B[4] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[0]
+i_B[5] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[1]
+i_B[6] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[2]
+i_B[7] => somador_completo_4bits:u_SOMADOR_COMPLETO1.i_B[3]
+i_B[8] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[0]
+i_B[9] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[1]
+i_B[10] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[2]
+i_B[11] => somador_completo_4bits:u_SOMADOR_COMPLETO2.i_B[3]
+i_B[12] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[0]
+i_B[13] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[1]
+i_B[14] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[2]
+i_B[15] => somador_completo_4bits:u_SOMADOR_COMPLETO3.i_B[3]
+i_CIN => somador_completo_4bits:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[1] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[2] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[3] <= somador_completo_4bits:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[4] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[5] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[6] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[7] <= somador_completo_4bits:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[8] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[9] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[10] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[11] <= somador_completo_4bits:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO[3]
+o_SOMADOR_COMPLETO[12] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[0]
+o_SOMADOR_COMPLETO[13] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[1]
+o_SOMADOR_COMPLETO[14] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[2]
+o_SOMADOR_COMPLETO[15] <= somador_completo_4bits:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO[3]
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3
+i_A[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_A
+i_A[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_A
+i_A[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_A
+i_A[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_A
+i_B[0] => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_B
+i_B[1] => somador_completo_1bit:u_SOMADOR_COMPLETO1.i_B
+i_B[2] => somador_completo_1bit:u_SOMADOR_COMPLETO2.i_B
+i_B[3] => somador_completo_1bit:u_SOMADOR_COMPLETO3.i_B
+i_CIN => somador_completo_1bit:u_SOMADOR_COMPLETO0.i_CIN
+o_COUT <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_COUT
+o_SOMADOR_COMPLETO[0] <= somador_completo_1bit:u_SOMADOR_COMPLETO0.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[1] <= somador_completo_1bit:u_SOMADOR_COMPLETO1.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[2] <= somador_completo_1bit:u_SOMADOR_COMPLETO2.o_SOMADOR_COMPLETO
+o_SOMADOR_COMPLETO[3] <= somador_completo_1bit:u_SOMADOR_COMPLETO3.o_SOMADOR_COMPLETO
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador_completo_32bits|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3
+i_A => o_SOMADOR_COMPLETO.IN0
+i_A => o_COUT.IN0
+i_A => o_COUT.IN0
+i_B => o_SOMADOR_COMPLETO.IN1
+i_B => o_COUT.IN1
+i_B => o_COUT.IN0
+i_CIN => o_SOMADOR_COMPLETO.IN1
+i_CIN => o_COUT.IN1
+i_CIN => o_COUT.IN1
+o_COUT <= o_COUT.DB_MAX_OUTPUT_PORT_TYPE
+o_SOMADOR_COMPLETO <= o_SOMADOR_COMPLETO.DB_MAX_OUTPUT_PORT_TYPE
+
+
