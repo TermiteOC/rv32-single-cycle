@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_ALUOp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_ALUOp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_ALUSRC",
+					"strict" : false
+				},
+				{
+					"name" : "o_MEMTOREG",
+					"strict" : false
+				},
+				{
+					"name" : "o_REGWRITE",
+					"strict" : false
+				},
+				{
+					"name" : "o_MEMREAD",
+					"strict" : false
+				},
+				{
+					"name" : "o_MEMWRITE",
+					"strict" : false
+				},
+				{
+					"name" : "o_BRANCH",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_OP[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

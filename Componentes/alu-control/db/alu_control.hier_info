@@ -1,0 +1,15 @@
+|alu_control
+i_ALU_OP[0] => o_Q.IN1
+i_ALU_OP[1] => o_Q.IN1
+i_ALU_OP[1] => o_Q.IN0
+i_ALU_OP[1] => o_Q.IN0
+i_F[0] => o_Q.IN0
+i_F[1] => o_Q.IN1
+i_F[2] => o_Q.IN1
+i_F[3] => o_Q.IN1
+o_Q[0] << o_Q.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[1] << o_Q.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[2] << o_Q.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[3] << <GND>
+
+
