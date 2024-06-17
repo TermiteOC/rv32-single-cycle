@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity rv32_top is
 port ( i_CLK : in std_logic;
@@ -197,7 +198,4 @@ begin
                                i_A	 => w_PC4,
                                i_B	 => w_BRANCHED,
                                o_OUT => w_PC_IN);
-
-  
-
 end arch_1;

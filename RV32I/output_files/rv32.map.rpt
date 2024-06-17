@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rv32
-Sun Jun 16 22:09:00 2024
+Mon Jun 17 01:32:53 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 16 22:08:59 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun 17 01:32:52 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; rv32                                        ;
 ; Top-level Entity Name           ; rv32_top                                    ;
@@ -332,7 +332,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -342,7 +342,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 16 22:08:17 2024
+    Info: Processing started: Mon Jun 17 01:30:57 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rv32 -c rv32
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -417,20 +417,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/dat
     Info (12022): Found design unit 1: decoder5to32-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/decoder5to32.vhd Line: 10
     Info (12023): Found entity 1: decoder5to32 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/decoder5to32.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/rv32_top.vhd
-    Info (12022): Found design unit 1: rv32_top-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 9
-    Info (12023): Found entity 1: rv32_top File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 4
+    Info (12022): Found design unit 1: rv32_top-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 10
+    Info (12023): Found entity 1: rv32_top File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_rv32_top.vhd
+    Info (12022): Found design unit 1: tb_rv32_top-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/tb_rv32_top.vhd Line: 8
+    Info (12023): Found entity 1: tb_rv32_top File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/tb_rv32_top.vhd Line: 5
 Info (12127): Elaborating entity "rv32_top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at rv32_top.vhd(119): object "w_UNUSED1" assigned a value but never read File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 119
-Info (12128): Elaborating entity "reg" for hierarchy "reg:u_PC" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 124
-Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:u_INSTRUCTION" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 129
-Info (12128): Elaborating entity "main_control" for hierarchy "main_control:u_MAINCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 133
-Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:u_REGFILE" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 142
+Warning (10036): Verilog HDL or VHDL warning at rv32_top.vhd(120): object "w_UNUSED1" assigned a value but never read File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 120
+Info (12128): Elaborating entity "reg" for hierarchy "reg:u_PC" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 125
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:u_INSTRUCTION" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 130
+Info (12128): Elaborating entity "main_control" for hierarchy "main_control:u_MAINCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 134
+Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:u_REGFILE" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 143
 Info (12128): Elaborating entity "decoder5to32" for hierarchy "reg_file:u_REGFILE|decoder5to32:u_DEC" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 68
 Info (12128): Elaborating entity "mux32_32bit" for hierarchy "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 71
-Info (12128): Elaborating entity "imm_gen" for hierarchy "imm_gen:u_IMMGEN" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 151
-Info (12128): Elaborating entity "mux" for hierarchy "mux:u_MUX_IMM" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 154
-Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:u_ALUCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 159
-Info (12128): Elaborating entity "ula" for hierarchy "ula:u_ALU" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 163
+Info (12128): Elaborating entity "imm_gen" for hierarchy "imm_gen:u_IMMGEN" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 152
+Info (12128): Elaborating entity "mux" for hierarchy "mux:u_MUX_IMM" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 155
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:u_ALUCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 160
+Info (12128): Elaborating entity "ula" for hierarchy "ula:u_ALU" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 164
 Info (12128): Elaborating entity "and_32bits" for hierarchy "ula:u_ALU|and_32bits:u_AND" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 60
 Info (12128): Elaborating entity "or_32bits" for hierarchy "ula:u_ALU|or_32bits:u_OR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 64
 Info (12128): Elaborating entity "soma_subtrai_32bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 68
@@ -442,20 +445,20 @@ Info (12128): Elaborating entity "somador_completo_1bit" for hierarchy "ula:u_AL
 Info (12128): Elaborating entity "slt_32bits" for hierarchy "ula:u_ALU|slt_32bits:u_SLT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 73
 Info (12128): Elaborating entity "nor_32bits" for hierarchy "ula:u_ALU|nor_32bits:u_NOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 77
 Info (12128): Elaborating entity "seletor_ula" for hierarchy "ula:u_ALU|seletor_ula:u_SELETOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 81
-Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:u_DATA" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 169
-Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:u_SHIFT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 187
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:u_DATA" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 170
+Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:u_SHIFT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 188
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_CLK" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 5
-    Warning (15610): No output dependent on input pin "i_RST" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 6
+    Warning (15610): No output dependent on input pin "i_CLK" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 6
+    Warning (15610): No output dependent on input pin "i_RST" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 7
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Sun Jun 16 22:09:00 2024
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:54
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon Jun 17 01:32:54 2024
+    Info: Elapsed time: 00:01:57
+    Info: Total CPU time (on all processors): 00:01:01
 
 

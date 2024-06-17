@@ -21,5 +21,5 @@ architecture arq_1 of instruction_memory is
   );
 	
 begin 
-  o_OUT <= w_MEM(to_integer(unsigned(i_ADDR(7 downto 0))));
+  o_OUT <= w_MEM(to_integer(unsigned(i_ADDR(9 downto 2))));
 end arq_1;
