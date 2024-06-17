@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_control
-Sun Jun 16 01:26:44 2024
+Sun Jun 16 18:25:07 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 16 01:26:44 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 16 18:25:07 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; main_control                                ;
 ; Top-level Entity Name           ; main_control                                ;
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -259,13 +259,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 16 01:26:02 2024
+    Info: Processing started: Sun Jun 16 18:22:45 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_control -c main_control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_main_control.vhd
-    Info (12022): Found design unit 1: tb_Main_control-behavioral File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/tb_main_control.vhd Line: 7
-    Info (12023): Found entity 1: tb_Main_control File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/tb_main_control.vhd Line: 4
+    Info (12022): Found design unit 1: tb_main_control-behavioral File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/tb_main_control.vhd Line: 7
+    Info (12023): Found entity 1: tb_main_control File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/tb_main_control.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/main_control.vhd
     Info (12022): Found design unit 1: main_control-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/main_control.vhd Line: 15
     Info (12023): Found entity 1: main_control File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/controlador/hdl/main_control.vhd Line: 4
@@ -278,9 +278,9 @@ Info (21057): Implemented 22 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Sun Jun 16 01:26:45 2024
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Sun Jun 16 18:25:07 2024
+    Info: Elapsed time: 00:02:22
+    Info: Total CPU time (on all processors): 00:01:01
 
 

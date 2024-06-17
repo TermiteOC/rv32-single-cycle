@@ -4,11 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_ALUOp[0]",
+					"name" : "o_ALU_OP[0]",
 					"strict" : false
 				},
 				{
-					"name" : "o_ALUOp[1]",
+					"name" : "o_ALU_OP[1]",
 					"strict" : false
 				},
 				{
