@@ -3,8 +3,9 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity rv32_top is
-port ( i_CLK : in std_logic;
-       i_RST : in std_logic);
+port ( i_CLK        : in  std_logic;
+       i_RST        : in  std_logic;
+		 o_ULA_RESULT : out std_logic_vector(31 downto 0));
 end rv32_top;
 
 architecture arch_1 of rv32_top is 
@@ -198,4 +199,6 @@ begin
                                i_A	 => w_PC4,
                                i_B	 => w_BRANCHED,
                                o_OUT => w_PC_IN);
+										 
+  o_ULA_RESULT <= w_ALU_RES;
 end arch_1;

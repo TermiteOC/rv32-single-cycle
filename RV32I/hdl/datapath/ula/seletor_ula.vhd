@@ -7,7 +7,7 @@ port ( i_AND          : in  std_logic_vector (31 downto 0);  -- entrada resultad
        i_ADD_SUBTRACT : in  std_logic_vector (31 downto 0);  -- entrada resultado ADD/SUBTRACT
        i_SLT          : in  std_logic_vector (31 downto 0);  -- entrada resultado SET LESS THAN
        i_NOR          : in  std_logic_vector (31 downto 0);  -- entrada resultado NOR
-	     i_SELETOR      : in  std_logic_vector (3  downto 0);  -- entrada seletor
+	     i_SELETOR     : in  std_logic_vector (3  downto 0);  -- entrada seletor
        o_RESULTADO    : out std_logic_vector (31 downto 0)); -- saída resultado
 end seletor_ula;
 
