@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY rv32
+set_global_assignment -name TOP_LEVEL_ENTITY rv32_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:58:10  JUNE 12, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -49,6 +49,31 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE hdl/datapath.vhd
-set_global_assignment -name VHDL_FILE hdl/controlador.vhd
+set_global_assignment -name VHDL_FILE hdl/controlador/main_control.vhd
+set_global_assignment -name VHDL_FILE hdl/controlador/alu_control.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/shift_left.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/reg.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/mux.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/instruction_memory.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/imm_gen.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/data_memory.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/ula.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/soma_subtrai.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/slt.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/seletor_ula.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/or.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/nor.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/complemento.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/ula/and.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/somador/somador_completo_32bits.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/somador/somador_completo_16bits.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/somador/somador_completo_4bits.vhd
+set_global_assignment -name VHDL_FILE hdl/datapath/somador/somador_completo_1bit.vhd
+set_global_assignment -name VHDL_FILE "hdl/datapath/banco-de-registradores/reg_file.vhd"
+set_global_assignment -name VHDL_FILE "hdl/datapath/banco-de-registradores/mux32_32bit.vhd"
+set_global_assignment -name VHDL_FILE "hdl/datapath/banco-de-registradores/decoder5to32.vhd"
 set_global_assignment -name VHDL_FILE hdl/rv32_top.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

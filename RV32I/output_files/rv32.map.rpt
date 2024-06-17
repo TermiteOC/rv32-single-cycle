@@ -1,0 +1,461 @@
+Analysis & Synthesis report for rv32
+Sun Jun 16 22:09:00 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_BRANCH"
+ 10. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_4"
+ 11. Port Connectivity Checks: "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI"
+ 12. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2"
+ 13. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1"
+ 14. Port Connectivity Checks: "reg_file:u_REGFILE|decoder5to32:u_DEC"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Jun 16 22:08:59 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; rv32                                        ;
+; Top-level Entity Name           ; rv32_top                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 2                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA6F31C6       ;                    ;
+; Top-level entity name                                                           ; rv32_top           ; rv32               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                     ;
++------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                          ; Library ;
++------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/controlador/main_control.vhd                     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/main_control.vhd                     ;         ;
+; hdl/controlador/alu_control.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/alu_control.vhd                      ;         ;
+; hdl/datapath/shift_left.vhd                          ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/shift_left.vhd                          ;         ;
+; hdl/datapath/reg.vhd                                 ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/reg.vhd                                 ;         ;
+; hdl/datapath/mux.vhd                                 ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/mux.vhd                                 ;         ;
+; hdl/datapath/instruction_memory.vhd                  ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/instruction_memory.vhd                  ;         ;
+; hdl/datapath/imm_gen.vhd                             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/imm_gen.vhd                             ;         ;
+; hdl/datapath/data_memory.vhd                         ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/data_memory.vhd                         ;         ;
+; hdl/datapath/ula/ula.vhd                             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd                             ;         ;
+; hdl/datapath/ula/soma_subtrai.vhd                    ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/soma_subtrai.vhd                    ;         ;
+; hdl/datapath/ula/slt.vhd                             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/slt.vhd                             ;         ;
+; hdl/datapath/ula/seletor_ula.vhd                     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/seletor_ula.vhd                     ;         ;
+; hdl/datapath/ula/or.vhd                              ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/or.vhd                              ;         ;
+; hdl/datapath/ula/nor.vhd                             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/nor.vhd                             ;         ;
+; hdl/datapath/ula/complemento.vhd                     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/complemento.vhd                     ;         ;
+; hdl/datapath/ula/and.vhd                             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/and.vhd                             ;         ;
+; hdl/datapath/somador/somador_completo_32bits.vhd     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_32bits.vhd     ;         ;
+; hdl/datapath/somador/somador_completo_16bits.vhd     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_16bits.vhd     ;         ;
+; hdl/datapath/somador/somador_completo_4bits.vhd      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_4bits.vhd      ;         ;
+; hdl/datapath/somador/somador_completo_1bit.vhd       ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_1bit.vhd       ;         ;
+; hdl/datapath/banco-de-registradores/reg_file.vhd     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd     ;         ;
+; hdl/datapath/banco-de-registradores/mux32_32bit.vhd  ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/mux32_32bit.vhd  ;         ;
+; hdl/datapath/banco-de-registradores/decoder5to32.vhd ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/decoder5to32.vhd ;         ;
+; hdl/rv32_top.vhd                                     ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd                                     ;         ;
++------------------------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; i_CLK ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |rv32_top                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |rv32_top           ; rv32_top    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "somador_completo_32bits:u_ADDER_BRANCH"                                               ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; i_cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "somador_completo_32bits:u_ADDER_4"                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_b[31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI"                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; o_cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2" ;
++---------+-------+----------+------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                        ;
++---------+-------+----------+------------------------------------------------+
+; i_data0 ; Input ; Info     ; Stuck at GND                                   ;
++---------+-------+----------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1" ;
++---------+-------+----------+------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                        ;
++---------+-------+----------+------------------------------------------------+
+; i_data0 ; Input ; Info     ; Stuck at GND                                   ;
++---------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_file:u_REGFILE|decoder5to32:u_DEC"                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; o_out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Jun 16 22:08:17 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rv32 -c rv32
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/controlador/main_control.vhd
+    Info (12022): Found design unit 1: main_control-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/main_control.vhd Line: 15
+    Info (12023): Found entity 1: main_control File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/main_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/controlador/alu_control.vhd
+    Info (12022): Found design unit 1: alu_control-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/alu_control.vhd Line: 10
+    Info (12023): Found entity 1: alu_control File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/controlador/alu_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/shift_left.vhd
+    Info (12022): Found design unit 1: shift_left-behavioral File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/shift_left.vhd Line: 10
+    Info (12023): Found entity 1: shift_left File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/shift_left.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/reg.vhd
+    Info (12022): Found design unit 1: reg-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/reg.vhd Line: 11
+    Info (12023): Found entity 1: reg File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/reg.vhd Line: 4
+Warning (12090): Entity "mux" obtained from "hdl/datapath/mux.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/mux.vhd
+    Info (12022): Found design unit 1: mux-arq1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/mux.vhd Line: 11
+    Info (12023): Found entity 1: mux File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/instruction_memory.vhd
+    Info (12022): Found design unit 1: instruction_memory-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/instruction_memory.vhd Line: 10
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/instruction_memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/imm_gen.vhd
+    Info (12022): Found design unit 1: imm_gen-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/imm_gen.vhd Line: 10
+    Info (12023): Found entity 1: imm_gen File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/imm_gen.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/data_memory.vhd
+    Info (12022): Found design unit 1: data_memory-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/data_memory.vhd Line: 14
+    Info (12023): Found entity 1: data_memory File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/data_memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/ula.vhd
+    Info (12022): Found design unit 1: ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 12
+    Info (12023): Found entity 1: ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/soma_subtrai.vhd
+    Info (12022): Found design unit 1: soma_subtrai_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/soma_subtrai.vhd Line: 12
+    Info (12023): Found entity 1: soma_subtrai_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/soma_subtrai.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/slt.vhd
+    Info (12022): Found design unit 1: slt_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/slt.vhd Line: 11
+    Info (12023): Found entity 1: slt_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/slt.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/seletor_ula.vhd
+    Info (12022): Found design unit 1: seletor_ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/seletor_ula.vhd Line: 14
+    Info (12023): Found entity 1: seletor_ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/seletor_ula.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/or.vhd
+    Info (12022): Found design unit 1: or_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/or.vhd Line: 10
+    Info (12023): Found entity 1: or_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/or.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/nor.vhd
+    Info (12022): Found design unit 1: nor_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/nor.vhd Line: 10
+    Info (12023): Found entity 1: nor_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/nor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/complemento.vhd
+    Info (12022): Found design unit 1: complemento_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/complemento.vhd Line: 10
+    Info (12023): Found entity 1: complemento_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/complemento.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/ula/and.vhd
+    Info (12022): Found design unit 1: and_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/and.vhd Line: 10
+    Info (12023): Found entity 1: and_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/and.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/somador/somador_completo_32bits.vhd
+    Info (12022): Found design unit 1: somador_completo_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_32bits.vhd Line: 12
+    Info (12023): Found entity 1: somador_completo_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_32bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/somador/somador_completo_16bits.vhd
+    Info (12022): Found design unit 1: somador_completo_16bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_16bits.vhd Line: 12
+    Info (12023): Found entity 1: somador_completo_16bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_16bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/somador/somador_completo_4bits.vhd
+    Info (12022): Found design unit 1: somador_completo_4bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_4bits.vhd Line: 12
+    Info (12023): Found entity 1: somador_completo_4bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_4bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/somador/somador_completo_1bit.vhd
+    Info (12022): Found design unit 1: somador_completo_1bit-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_1bit.vhd Line: 12
+    Info (12023): Found entity 1: somador_completo_1bit File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/banco-de-registradores/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 16
+    Info (12023): Found entity 1: reg_file File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/banco-de-registradores/mux32_32bit.vhd
+    Info (12022): Found design unit 1: mux32_32bit-Behavioral File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/mux32_32bit.vhd Line: 42
+    Info (12023): Found entity 1: mux32_32bit File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/mux32_32bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/datapath/banco-de-registradores/decoder5to32.vhd
+    Info (12022): Found design unit 1: decoder5to32-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/decoder5to32.vhd Line: 10
+    Info (12023): Found entity 1: decoder5to32 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/decoder5to32.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/rv32_top.vhd
+    Info (12022): Found design unit 1: rv32_top-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 9
+    Info (12023): Found entity 1: rv32_top File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 4
+Info (12127): Elaborating entity "rv32_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at rv32_top.vhd(119): object "w_UNUSED1" assigned a value but never read File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 119
+Info (12128): Elaborating entity "reg" for hierarchy "reg:u_PC" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 124
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:u_INSTRUCTION" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 129
+Info (12128): Elaborating entity "main_control" for hierarchy "main_control:u_MAINCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 133
+Info (12128): Elaborating entity "reg_file" for hierarchy "reg_file:u_REGFILE" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 142
+Info (12128): Elaborating entity "decoder5to32" for hierarchy "reg_file:u_REGFILE|decoder5to32:u_DEC" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 68
+Info (12128): Elaborating entity "mux32_32bit" for hierarchy "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/banco-de-registradores/reg_file.vhd Line: 71
+Info (12128): Elaborating entity "imm_gen" for hierarchy "imm_gen:u_IMMGEN" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 151
+Info (12128): Elaborating entity "mux" for hierarchy "mux:u_MUX_IMM" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 154
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:u_ALUCTRL" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 159
+Info (12128): Elaborating entity "ula" for hierarchy "ula:u_ALU" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 163
+Info (12128): Elaborating entity "and_32bits" for hierarchy "ula:u_ALU|and_32bits:u_AND" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 60
+Info (12128): Elaborating entity "or_32bits" for hierarchy "ula:u_ALU|or_32bits:u_OR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 64
+Info (12128): Elaborating entity "soma_subtrai_32bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 68
+Info (12128): Elaborating entity "complemento_32bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|complemento_32bits:u_COMPLEMENTO" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/soma_subtrai.vhd Line: 31
+Info (12128): Elaborating entity "somador_completo_32bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/soma_subtrai.vhd Line: 35
+Info (12128): Elaborating entity "somador_completo_16bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_32bits.vhd Line: 25
+Info (12128): Elaborating entity "somador_completo_4bits" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_16bits.vhd Line: 25
+Info (12128): Elaborating entity "somador_completo_1bit" for hierarchy "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/somador/somador_completo_4bits.vhd Line: 24
+Info (12128): Elaborating entity "slt_32bits" for hierarchy "ula:u_ALU|slt_32bits:u_SLT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 73
+Info (12128): Elaborating entity "nor_32bits" for hierarchy "ula:u_ALU|nor_32bits:u_NOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 77
+Info (12128): Elaborating entity "seletor_ula" for hierarchy "ula:u_ALU|seletor_ula:u_SELETOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/ula/ula.vhd Line: 81
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:u_DATA" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 169
+Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:u_SHIFT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 187
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_CLK" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 5
+    Warning (15610): No output dependent on input pin "i_RST" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/rv32_top.vhd Line: 6
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Sun Jun 16 22:09:00 2024
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:54
+
+

@@ -2,11 +2,11 @@ library IEEE;
 use IEEE.std_logic_1164.all;
  
 entity somador_completo_4bits is
-port ( i_A                : in  std_logic_vector (3 downto 0);  -- entrada A
-	     i_B                : in  std_logic_vector (3 downto 0);  -- entrada B
+port ( i_A                : in  std_logic_vector(3 downto 0);  -- entrada A
+	     i_B                : in  std_logic_vector(3 downto 0);  -- entrada B
        i_CIN              : in  std_logic;                      -- entrada carry in
        o_COUT             : out std_logic;                      -- saída carry out
-       o_SOMADOR_COMPLETO : out std_logic_vector (3 downto 0)); -- saída resultado
+       o_SOMADOR_COMPLETO : out std_logic_vector(3 downto 0)); -- saída resultado
 end somador_completo_4bits;
  
 architecture arq_1 of somador_completo_4bits is
