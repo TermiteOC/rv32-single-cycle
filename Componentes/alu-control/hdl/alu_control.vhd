@@ -2,8 +2,8 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity alu_control is
-port ( i_ALU_OP : in  std_logic_vector(1 downto 0); 
-       i_F      : in  std_logic_vector(3 downto 0);  
+port ( i_ALU_OP : in  std_logic_vector(1 downto 0);
+       i_F      : in  std_logic_vector(3 downto 0); 
        o_Q      : out std_logic_vector(3 downto 0));
 end alu_control;
 
