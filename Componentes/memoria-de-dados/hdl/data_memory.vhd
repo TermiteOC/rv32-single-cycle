@@ -20,11 +20,11 @@ begin
   begin
     if rising_edge(i_CLK) then
       if i_MEMWRITE = '1' then
-        memory(to_integer(unsigned(i_ADDRESS(8 downto 0)))) <= i_IN;
+        memory(to_integer(unsigned(i_ADDRESS(10 downto 2)))) <= i_IN;
       end if;
     end if;
 	 
-	  o_OUT <= memory(to_integer(unsigned(i_ADDRESS(8 downto 0))));
+	  o_OUT <= memory(to_integer(unsigned(i_ADDRESS(10 downto 2))));
 	 
   end process;
 end arch_1;

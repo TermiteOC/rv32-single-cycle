@@ -28,32 +28,32 @@ begin
 	  assert (w_OUT = "00000000010000000000010010010011")
 	  report "Fail @ 1" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000001";
+	  w_ADDR <= "00000000000000000000000000000100";
 	  wait for 1 ns;
 	  assert (w_OUT = "00000000001100000000100100010011")
 	  report "Fail @ 2" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000010";
+	  w_ADDR <= "00000000000000000000000000001000";
 	  wait for 1 ns;
 	  assert (w_OUT = "00000000001000000000100110010011")
 	  report "Fail @ 3" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000011";
+	  w_ADDR <= "00000000000000000000000000001100";
 	  wait for 1 ns;
 	  assert (w_OUT = "00000000000100000000101000010011")
 	  report "Fail @ 4" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000100";
+	  w_ADDR <= "00000000000000000000000000010000";
 	  wait for 1 ns;
 	  assert (w_OUT = "00000001001001001000001010110011")
 	  report "Fail @ 5" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000101";
+	  w_ADDR <= "00000000000000000000000000010100";
 	  wait for 1 ns;
 	  assert (w_OUT = "00000001010010011000001100110011")
 	  report "Fail @ 6" severity error;
 		
-	  w_ADDR <= "00000000000000000000000000000110";
+	  w_ADDR <= "00000000000000000000000000011000";
 	  wait for 1 ns;
 	  assert (w_OUT = "01000000011000101000010000110011")
 	  report "Fail @ 7" severity error;
