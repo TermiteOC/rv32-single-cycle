@@ -1,0 +1,37 @@
+Address     Code        Basic                        Line Source
+
+4194304  0x0fc10417  auipc x8,64528               9            la    s0, arrayA      # carrega o endereco de arrayA em s0, 
+4194308  0x00040413  addi x8,x8,0                      
+4194312  0x00000493  addi x9,x0,0                 11           addi  s1, zero, 0     # i = 0
+4194316  0x00100a93  addi x21,x0,1                12           addi  s5, zero, 1     # j = 1
+4194320  0x00500913  addi x18,x0,5                14           addi  s2, zero, 5     # s2 = 5  
+4194324  0x009482b3  add x5,x9,x9                 15           add   t0, s1, s1      # t0 = 2*i
+4194328  0x005282b3  add x5,x5,x5                 16           add   t0, t0, t0      # t0 = 4*i
+4194332  0x005402b3  add x5,x8,x5                 17           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
+4194336  0x0122a023  sw x18,0(x5)                 18           sw    s2, 0(t0)       # A[i] = s2 = 5
+4194340  0x0154a2b3  slt x5,x9,x21                19           slt   t0, s1, s5      # se i < 1, t0 = 1, se nao, t0 = 0
+4194344  0x02028e63  beq x5,x0,60                 20           beq   t0, zero, Exit1 # se t0 = 0, vai para Exit1
+4194348  0x015484b3  add x9,x9,x21                22           add   s1, s1, s5      # i = i + 1 = 1
+4194352  0x41590933  sub x18,x18,x21              23           sub   s2, s2, s5      # s2 = s2 - j = 4
+4194356  0x009482b3  add x5,x9,x9                 24           add   t0, s1, s1      # t0 = 2*i
+4194360  0x005282b3  add x5,x5,x5                 25           add   t0, t0, t0      # t0 = 4*i
+4194364  0x005402b3  add x5,x8,x5                 26           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
+4194368  0x0122a023  sw x18,0(x5)                 27           sw    s2, 0(t0)       # A[i] = s2 = 4
+4194372  0x0154a2b3  slt x5,x9,x21                28           slt   t0, s1, s5      # se i < 1, t0 = 1, se nao, t0 = 0
+4194376  0x00028e63  beq x5,x0,28                 29           beq   t0, zero, Exit1 # se t0 = 0, vai para Exit1
+4194380  0x015484b3  add x9,x9,x21                31           add   s1, s1, s5      # i = i + j = 2
+4194384  0x41590933  sub x18,x18,x21              32           sub   s2, s2, s5      # s2 = s2 - j = 3
+4194388  0x009482b3  add x5,x9,x9                 33           add   t0, s1, s1      # t0 = 2*i
+4194392  0x005282b3  add x5,x5,x5                 34           add   t0, t0, t0      # t0 = 4*i
+4194396  0x005402b3  add x5,x8,x5                 35           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
+4194400  0x0122a023  sw x18,0(x5)                 36           sw    s2, 0(t0)       # A[i] = s2 = 3
+4194404  0x009482b3  add x5,x9,x9                 39           add   t0, s1, s1      # t0 = 2*i, i = 1
+4194408  0x005282b3  add x5,x5,x5                 40           add   t0, t0, t0      # t0 = 4*i
+4194412  0x005402b3  add x5,x8,x5                 41           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
+4194416  0x0002a303  lw x6,0(x5)                  42           lw    t1, 0(t0)       # t1 = A[i] ====== 4
+4194420  0x415484b3  sub x9,x9,x21                44           sub   s1, s1, s5      # i = i - 1 = 0
+4194424  0x009482b3  add x5,x9,x9                 45           add   t0, s1, s1      # t0 = 2*i
+4194428  0x005282b3  add x5,x5,x5                 46           add   t0, t0, t0      # t0 = 4*i
+4194432  0x005402b3  add x5,x8,x5                 47           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
+4194436  0x0002a383  lw x7,0(x5)                  48           lw    t2, 0(t0)       # t2 = A[i] ====== 5
+4194440  0x00000013  addi x0,x0,0                 50   End:    nop                   # sem operacao
