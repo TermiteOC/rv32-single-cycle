@@ -11,10 +11,19 @@ architecture arch_1 of alu_control is
 begin
   process(i_ALU_OP, i_F)
   begin
-    o_Q(0) <=  (i_ALU_OP(1) and (not i_F(3)) and i_F(2) and i_F(1) and (not i_F(0)));
-    o_Q(1) <=  ((not i_ALU_OP(1)) and (not i_ALU_OP(0))) or (i_ALU_OP(0)) or (i_ALU_OP(1) and (not i_F(3)) and (not i_F(2)) and (not i_F(1)) and (not i_F(0))) or
-               (i_ALU_OP(1) and i_F(3) and (not i_F(2)) and (not i_F(1)) and (not i_F(0)));
-    o_Q(2) <=  (i_ALU_OP(1) and i_F(3) and (not i_F(2)) and (not i_F(1)) and (not i_F(0))) or i_ALU_OP(0);
+    o_Q(0) <=  (i_ALU_OP(1) and (not i_ALU_OP(0)) and (not i_F(3)) and i_F(2) and i_F(1) and (not i_F(0))) or             -- or
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and (not i_F(3)) and (not i_F(2)) and i_F(1) and (not i_F(0)));         -- slt
+    
+    o_Q(1) <=  ((not i_ALU_OP(1)) and (not i_ALU_OP(0))) or                                                               -- lw, sw
+               ((not i_ALU_OP(1)) and i_ALU_OP(0)) or                                                                     -- beq
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and (not i_F(3)) and (not i_F(2)) and (not i_F(1)) and (not i_F(0))) or -- add
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and i_F(3) and (not i_F(2)) and (not i_F(1)) and (not i_F(0))) or       -- sub
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and (not i_F(3)) and (not i_F(2)) and i_F(1) and (not i_F(0)));         -- slt
+
+    o_Q(2) <=  ((not i_ALU_OP(1)) and i_ALU_OP(0)) or                                                                     -- beq
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and i_F(3) and (not i_F(2)) and (not i_F(1)) and (not i_F(0))) or       -- sub
+               (i_ALU_OP(1) and (not i_ALU_OP(0)) and (not i_F(3)) and (not i_F(2)) and i_F(1) and (not i_F(0)));         -- slt
+
     o_Q(3) <=  '0';
   end process;
 end arch_1;

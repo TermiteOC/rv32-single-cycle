@@ -244,15 +244,13 @@ i_OP[4] => o_ALU_OP.IN1
 i_OP[4] => o_ALU_OP.IN1
 i_OP[5] => o_ALU_OP.IN1
 i_OP[5] => o_ALU_OP.IN1
-i_OP[5] => o_ALUSRC.IN1
+i_OP[5] => o_ALU_OP.IN1
 i_OP[5] => o_ALUSRC.IN1
 i_OP[6] => o_ALU_OP.IN1
-i_OP[6] => o_BRANCH.IN1
+i_OP[6] => o_ALU_OP.IN1
 i_OP[6] => o_ALU_OP.IN1
 i_OP[6] => o_ALUSRC.IN1
 i_OP[6] => o_ALUSRC.IN1
-i_OP[6] => o_ALUSRC.IN1
-i_OP[6] => o_MEMREAD.IN1
 o_ALU_OP[0] <= o_ALU_OP.DB_MAX_OUTPUT_PORT_TYPE
 o_ALU_OP[1] <= o_ALU_OP.DB_MAX_OUTPUT_PORT_TYPE
 o_ALUSRC <= o_ALUSRC.DB_MAX_OUTPUT_PORT_TYPE
@@ -260,7 +258,7 @@ o_MEMTOREG <= o_ALUSRC.DB_MAX_OUTPUT_PORT_TYPE
 o_REGWRITE <= o_REGWRITE.DB_MAX_OUTPUT_PORT_TYPE
 o_MEMREAD <= o_MEMREAD.DB_MAX_OUTPUT_PORT_TYPE
 o_MEMWRITE <= o_ALUSRC.DB_MAX_OUTPUT_PORT_TYPE
-o_BRANCH <= o_BRANCH.DB_MAX_OUTPUT_PORT_TYPE
+o_BRANCH <= o_ALU_OP.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |rv32_top|reg_file:u_REGFILE
@@ -5155,15 +5153,17 @@ o_OUT[31] <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |rv32_top|alu_control:u_ALUCTRL
-i_ALU_OP[0] => o_Q.IN1
-i_ALU_OP[0] => o_Q.IN1
 i_ALU_OP[0] => o_Q.IN0
-i_ALU_OP[1] => o_Q.IN0
-i_ALU_OP[1] => o_Q.IN0
+i_ALU_OP[0] => o_Q.IN0
+i_ALU_OP[0] => o_Q.IN0
+i_ALU_OP[1] => o_Q.IN1
+i_ALU_OP[1] => o_Q.IN1
 i_ALU_OP[1] => o_Q.IN1
 i_F[0] => o_Q.IN1
 i_F[0] => o_Q.IN1
 i_F[0] => o_Q.IN1
+i_F[0] => o_Q.IN1
+i_F[1] => o_Q.IN1
 i_F[1] => o_Q.IN1
 i_F[1] => o_Q.IN1
 i_F[1] => o_Q.IN1

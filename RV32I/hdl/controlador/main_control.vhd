@@ -16,30 +16,27 @@ architecture arch_1 of main_control is
 begin
   process(i_OP)
   begin
-    o_ALU_OP(0) <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6);
+    o_ALU_OP(0) <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6)) or             -- beq
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and (not i_OP(5)) and (not i_OP(6)));        -- formato i
 	 
-    o_ALU_OP(1) <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and i_OP(5) and (not i_OP(6));
+    o_ALU_OP(1) <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and i_OP(5) and (not i_OP(6))) or            -- formato r
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and (not i_OP(5)) and (not i_OP(6)));        -- formato i
 	 
-    o_ALUSRC    <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6))) or 
-                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and (not i_OP(6))) or
-						 (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6)));
-						 --(i_OP(0) and i_OP(1) and i_OP(2) and (not i_OP(3)) and i_OP(4) and i_OP(5) and (not i_OP(6))) or
-						 --(i_OP(0) and i_OP(1) and i_OP(2) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6))) or
-						 --(i_OP(0) and i_OP(1) and i_OP(2) and i_OP(3) and (not i_OP(4)) and i_OP(5) and i_OP(6)) or
-						 --(i_OP(0) and i_OP(1) and i_OP(2) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6)) or
-						 --(i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6)) or
-						 --(i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6)));
+    o_ALUSRC    <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6))) or -- lw
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and (not i_OP(6))) or       -- sw
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6)));         -- formato i;
 						 
-    o_MEMTOREG  <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6)); 
+    o_MEMTOREG  <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6));    -- lw
 	 
-    o_REGWRITE  <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and i_OP(5) and (not i_OP(6))) or 
-                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6))) or
-						 (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6)));
+    o_REGWRITE  <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6))) or -- lw
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and  i_OP(4) and i_OP(5) and (not i_OP(6))) or            -- formato r
+						       (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and i_OP(4) and (not i_OP(5)) and (not i_OP(6)));         -- formato i
 						 
-    o_MEMREAD   <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6));  
+    o_MEMREAD   <= (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and (not i_OP(5)) and (not i_OP(6))) or -- lw  
+                   (i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and (not i_OP(6)));         -- sw
+  
+    o_MEMWRITE  <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and (not i_OP(6));          -- sw
 	 
-    o_MEMWRITE  <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and (not i_OP(6)); 
-	 
-    o_BRANCH    <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6);
+    o_BRANCH    <=  i_OP(0) and i_OP(1) and (not i_OP(2)) and (not i_OP(3)) and (not i_OP(4)) and i_OP(5) and i_OP(6);                -- beq
   end process;
 end arch_1;
