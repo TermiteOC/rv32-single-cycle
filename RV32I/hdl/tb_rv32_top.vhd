@@ -40,7 +40,7 @@ begin
     w_RST     <= '0';
     wait for 1 ns;
 
-    wait for 20 ns;
+    wait for 40 ns;
 	  assert false report "Teste concluído com sucesso." severity note;
     wait;
   end process;

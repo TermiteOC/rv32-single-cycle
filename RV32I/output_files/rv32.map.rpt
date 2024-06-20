@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rv32
-Wed Jun 19 01:15:31 2024
+Thu Jun 20 17:56:17 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,18 +14,17 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_BRANCH"
- 13. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_4"
- 14. Port Connectivity Checks: "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI"
- 15. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2"
- 16. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1"
- 17. Port Connectivity Checks: "reg_file:u_REGFILE|decoder5to32:u_DEC"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_BRANCH"
+ 12. Port Connectivity Checks: "somador_completo_32bits:u_ADDER_4"
+ 13. Port Connectivity Checks: "ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI"
+ 14. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2"
+ 15. Port Connectivity Checks: "reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1"
+ 16. Port Connectivity Checks: "reg_file:u_REGFILE|decoder5to32:u_DEC"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -52,13 +51,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 19 01:15:31 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 20 17:56:16 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; rv32                                        ;
 ; Top-level Entity Name           ; rv32_top                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 454                                         ;
+; Total registers                 ; 17385                                       ;
 ; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -213,25 +212,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 396         ;
+; Estimate of Logic utilization (ALMs needed) ; 12009       ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 475         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 63          ;
-;     -- 5 input functions                    ; 245         ;
-;     -- 4 input functions                    ; 90          ;
-;     -- <=3 input functions                  ; 77          ;
+; Combinational ALUT usage for logic          ; 7123        ;
+;     -- 7 input functions                    ; 69          ;
+;     -- 6 input functions                    ; 6103        ;
+;     -- 5 input functions                    ; 183         ;
+;     -- 4 input functions                    ; 612         ;
+;     -- <=3 input functions                  ; 156         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 454         ;
+; Dedicated logic registers                   ; 17385       ;
 ;                                             ;             ;
 ; I/O pins                                    ; 34          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_CLK~input ;
-; Maximum fan-out                             ; 454         ;
-; Total fan-out                               ; 3951        ;
-; Average fan-out                             ; 3.96        ;
+; Maximum fan-out                             ; 17385       ;
+; Total fan-out                               ; 93109       ;
+; Average fan-out                             ; 3.79        ;
 +---------------------------------------------+-------------+
 
 
@@ -240,633 +239,87 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                ; Entity Name             ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |rv32_top                                                     ; 475 (0)             ; 454 (0)                   ; 0                 ; 0          ; 34   ; 0            ; |rv32_top                                                                                                                                                                                                                          ; rv32_top                ; work         ;
-;    |alu_control:u_ALUCTRL|                                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|alu_control:u_ALUCTRL                                                                                                                                                                                                    ; alu_control             ; work         ;
-;    |instruction_memory:u_INSTRUCTION|                         ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|instruction_memory:u_INSTRUCTION                                                                                                                                                                                         ; instruction_memory      ; work         ;
-;    |mux:u_MUX_IMM|                                            ; 175 (175)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|mux:u_MUX_IMM                                                                                                                                                                                                            ; mux                     ; work         ;
-;    |reg:u_PC|                                                 ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg:u_PC                                                                                                                                                                                                                 ; reg                     ; work         ;
-;    |reg_file:u_REGFILE|                                       ; 126 (0)             ; 446 (446)                 ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE                                                                                                                                                                                                       ; reg_file                ; work         ;
-;       |decoder5to32:u_DEC|                                    ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE|decoder5to32:u_DEC                                                                                                                                                                                    ; decoder5to32            ; work         ;
-;       |mux32_32bit:u_MUX_READ_DATA1|                          ; 108 (108)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1                                                                                                                                                                          ; mux32_32bit             ; work         ;
-;    |somador_completo_32bits:u_ADDER_4|                        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4                                                                                                                                                                                        ; somador_completo_32bits ; work         ;
-;       |somador_completo_16bits:u_SOMADOR_COMPLETO0|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                                                                            ; somador_completo_16bits ; work         ;
-;          |somador_completo_4bits:u_SOMADOR_COMPLETO1|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                                                                                 ; somador_completo_4bits  ; work         ;
+; |rv32_top                                                     ; 7123 (9)            ; 17385 (0)                 ; 0                 ; 0          ; 34   ; 0            ; |rv32_top                                                                                                                                                                                                                          ; rv32_top                ; work         ;
+;    |alu_control:u_ALUCTRL|                                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|alu_control:u_ALUCTRL                                                                                                                                                                                                    ; alu_control             ; work         ;
+;    |data_memory:u_DATA|                                       ; 6018 (6018)         ; 16384 (16384)             ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|data_memory:u_DATA                                                                                                                                                                                                       ; data_memory             ; work         ;
+;    |imm_gen:u_IMMGEN|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|imm_gen:u_IMMGEN                                                                                                                                                                                                         ; imm_gen                 ; work         ;
+;    |instruction_memory:u_INSTRUCTION|                         ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|instruction_memory:u_INSTRUCTION                                                                                                                                                                                         ; instruction_memory      ; work         ;
+;    |main_control:u_MAINCTRL|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|main_control:u_MAINCTRL                                                                                                                                                                                                  ; main_control            ; work         ;
+;    |mux:u_MUX_BRANCH|                                         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|mux:u_MUX_BRANCH                                                                                                                                                                                                         ; mux                     ; work         ;
+;    |mux:u_MUX_IMM|                                            ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|mux:u_MUX_IMM                                                                                                                                                                                                            ; mux                     ; work         ;
+;    |mux:u_MUX_MEMORY|                                         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|mux:u_MUX_MEMORY                                                                                                                                                                                                         ; mux                     ; work         ;
+;    |reg:u_PC|                                                 ; 6 (6)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg:u_PC                                                                                                                                                                                                                 ; reg                     ; work         ;
+;    |reg_file:u_REGFILE|                                       ; 773 (0)             ; 992 (992)                 ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE                                                                                                                                                                                                       ; reg_file                ; work         ;
+;       |decoder5to32:u_DEC|                                    ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE|decoder5to32:u_DEC                                                                                                                                                                                    ; decoder5to32            ; work         ;
+;       |mux32_32bit:u_MUX_READ_DATA1|                          ; 371 (371)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1                                                                                                                                                                          ; mux32_32bit             ; work         ;
+;       |mux32_32bit:u_MUX_READ_DATA2|                          ; 362 (362)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2                                                                                                                                                                          ; mux32_32bit             ; work         ;
+;    |somador_completo_32bits:u_ADDER_4|                        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4                                                                                                                                                                                        ; somador_completo_32bits ; work         ;
+;       |somador_completo_16bits:u_SOMADOR_COMPLETO0|           ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                                                                            ; somador_completo_16bits ; work         ;
+;          |somador_completo_4bits:u_SOMADOR_COMPLETO0|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0                                                                                                 ; somador_completo_4bits  ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3                                                       ; somador_completo_1bit   ; work         ;
+;          |somador_completo_4bits:u_SOMADOR_COMPLETO1|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                                                                                 ; somador_completo_4bits  ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0                                                       ; somador_completo_1bit   ; work         ;
 ;             |somador_completo_1bit:u_SOMADOR_COMPLETO1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_4|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1                                                       ; somador_completo_1bit   ; work         ;
-;    |ula:u_ALU|                                                ; 143 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU                                                                                                                                                                                                                ; ula                     ; work         ;
-;       |seletor_ula:u_SELETOR|                                 ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|seletor_ula:u_SELETOR                                                                                                                                                                                          ; seletor_ula             ; work         ;
-;       |soma_subtrai_32bits:u_SOMA_SUBTRAI|                    ; 110 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI                                                                                                                                                                             ; soma_subtrai_32bits     ; work         ;
-;          |complemento_32bits:u_COMPLEMENTO|                   ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|complemento_32bits:u_COMPLEMENTO                                                                                                                                            ; complemento_32bits      ; work         ;
-;          |somador_completo_32bits:u_SOMADOR_COMPLETO|         ; 83 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO                                                                                                                                  ; somador_completo_32bits ; work         ;
-;             |somador_completo_16bits:u_SOMADOR_COMPLETO0|     ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                      ; somador_completo_16bits ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
+;    |somador_completo_32bits:u_ADDER_BRANCH|                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH                                                                                                                                                                                   ; somador_completo_32bits ; work         ;
+;       |somador_completo_16bits:u_SOMADOR_COMPLETO0|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                                                                       ; somador_completo_16bits ; work         ;
+;          |somador_completo_4bits:u_SOMADOR_COMPLETO0|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0                                                                                            ; somador_completo_4bits  ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO2|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2                                                  ; somador_completo_1bit   ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO3|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3                                                  ; somador_completo_1bit   ; work         ;
+;          |somador_completo_4bits:u_SOMADOR_COMPLETO1|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                                                                            ; somador_completo_4bits  ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO0|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0                                                  ; somador_completo_1bit   ; work         ;
+;             |somador_completo_1bit:u_SOMADOR_COMPLETO1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|somador_completo_32bits:u_ADDER_BRANCH|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1                                                  ; somador_completo_1bit   ; work         ;
+;    |ula:u_ALU|                                                ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU                                                                                                                                                                                                                ; ula                     ; work         ;
+;       |seletor_ula:u_SELETOR|                                 ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|seletor_ula:u_SELETOR                                                                                                                                                                                          ; seletor_ula             ; work         ;
+;       |slt_32bits:u_SLT|                                      ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|slt_32bits:u_SLT                                                                                                                                                                                               ; slt_32bits              ; work         ;
+;       |soma_subtrai_32bits:u_SOMA_SUBTRAI|                    ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI                                                                                                                                                                             ; soma_subtrai_32bits     ; work         ;
+;          |complemento_32bits:u_COMPLEMENTO|                   ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|complemento_32bits:u_COMPLEMENTO                                                                                                                                            ; complemento_32bits      ; work         ;
+;          |somador_completo_32bits:u_SOMADOR_COMPLETO|         ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO                                                                                                                                  ; somador_completo_32bits ; work         ;
+;             |somador_completo_16bits:u_SOMADOR_COMPLETO0|     ; 33 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                      ; somador_completo_16bits ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
 ;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_16bits:u_SOMADOR_COMPLETO1|     ; 46 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1                                                                                      ; somador_completo_16bits ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;             |somador_completo_16bits:u_SOMADOR_COMPLETO1|     ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1                                                                                      ; somador_completo_16bits ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
 ;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
 ;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 15 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
 ;                   |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
+;                   |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |rv32_top|ula:u_ALU|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                    ;
-+-----------------------------------------+---------------------------------------------+
-; Register name                           ; Reason for Removal                          ;
-+-----------------------------------------+---------------------------------------------+
-; reg:u_PC|o_S[0]                         ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[10][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[11][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[14][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[15][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[24][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[25][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[28][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[29][31]   ; Lost fanout                                 ;
-; reg:u_PC|o_S[1]                         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:u_REGFILE|w_REG_FILE[12][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[12][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[13][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[30][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[31][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[17][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[21][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][0]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][1]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][2]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][3]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][4]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][5]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][6]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][7]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][8]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][9]    ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][10]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][11]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][12]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][13]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][14]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][15]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][16]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][17]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][18]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][19]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][20]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][21]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][22]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][23]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][24]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][25]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][26]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][27]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][28]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][29]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][30]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[23][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[26][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[27][31]   ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[1][0]     ; Lost fanout                                 ;
-; reg_file:u_REGFILE|w_REG_FILE[16][0]    ; Lost fanout                                 ;
-; Total Number of Removed Registers = 548 ;                                             ;
-+-----------------------------------------+---------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                        ;
-+--------------------------------------+--------------------+----------------------------------------+
-; Register name                        ; Reason for Removal ; Registers Removed due to This Register ;
-+--------------------------------------+--------------------+----------------------------------------+
-; reg_file:u_REGFILE|w_REG_FILE[10][0] ; Lost Fanouts       ; reg_file:u_REGFILE|w_REG_FILE[1][0]    ;
-+--------------------------------------+--------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; reg:u_PC|o_S[0]                       ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -874,12 +327,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 454   ;
-; Number of registers using Synchronous Clear  ; 378   ;
+; Total registers                              ; 17385 ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 446   ;
+; Number of registers using Clock Enable       ; 17376 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -889,9 +342,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1|Mux31 ;
-; 17:1               ; 27 bits   ; 297 LEs       ; 297 LEs              ; 0 LEs                  ; No         ; |rv32_top|mux:u_MUX_IMM|o_OUT[23]                               ;
-; 17:1               ; 5 bits    ; 55 LEs        ; 55 LEs               ; 0 LEs                  ; No         ; |rv32_top|mux:u_MUX_IMM|o_OUT[4]                                ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 62 LEs               ; 93 LEs                 ; No         ; |rv32_top|ula:u_ALU|seletor_ula:u_SELETOR|Mux25                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |rv32_top|imm_gen:u_IMMGEN|o_IMM[1]                             ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA1|Mux20 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |rv32_top|reg_file:u_REGFILE|mux32_32bit:u_MUX_READ_DATA2|Mux10 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -959,22 +413,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 454                         ;
-;     CLR               ; 8                           ;
-;     ENA               ; 68                          ;
-;     ENA SCLR          ; 378                         ;
-; arriav_lcell_comb     ; 475                         ;
-;     normal            ; 475                         ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 47                          ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 90                          ;
-;         5 data inputs ; 245                         ;
-;         6 data inputs ; 63                          ;
+; arriav_ff             ; 17385                       ;
+;     CLR               ; 9                           ;
+;     ENA               ; 17376                       ;
+; arriav_lcell_comb     ; 7123                        ;
+;     extend            ; 69                          ;
+;         7 data inputs ; 69                          ;
+;     normal            ; 7054                        ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 112                         ;
+;         4 data inputs ; 612                         ;
+;         5 data inputs ; 183                         ;
+;         6 data inputs ; 6103                        ;
 ; boundary_port         ; 34                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 10.72                       ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 8.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -983,7 +437,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:01:38     ;
 +----------------+--------------+
 
 
@@ -993,7 +447,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 19 01:14:37 2024
+    Info: Processing started: Thu Jun 20 17:53:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rv32 -c rv32
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1101,17 +555,17 @@ Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:u_SHIFT"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "data_memory:u_DATA|memory" is uninferred due to asynchronous read logic File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/RV32I/hdl/datapath/data_memory.vhd Line: 16
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 547 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 955 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 24533 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 921 logic cells
+    Info (21061): Implemented 24499 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Wed Jun 19 01:15:31 2024
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:01:01
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Thu Jun 20 17:56:17 2024
+    Info: Elapsed time: 00:02:27
+    Info: Total CPU time (on all processors): 00:02:34
 
 
