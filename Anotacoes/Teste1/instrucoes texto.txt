@@ -34,4 +34,5 @@ Address     Code        Basic                        Line Source
 4194428  0x005282b3  add x5,x5,x5                 46           add   t0, t0, t0      # t0 = 4*i
 4194432  0x005402b3  add x5,x8,x5                 47           add   t0, s0, t0      # t0 = addr-base + 4*i = addr de A[i]
 4194436  0x0002a383  lw x7,0(x5)                  48           lw    t2, 0(t0)       # t2 = A[i] ====== 5
-4194440  0x00000013  addi x0,x0,0                 50   End:    nop                   # sem operacao
+4194440  0x00730e33  add x28,x6,x7                50           add   t3, t1, t2      # t1 + t2 = 4 + 5
+4194444  0x00000013  addi x0,x0,0                 52   End:    nop                   # sem operacao
