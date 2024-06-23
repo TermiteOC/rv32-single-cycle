@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity data_memory is
 port ( i_CLK      : in  std_logic;
        i_MEMWRITE : in  std_logic;
-		   i_MEMREAD  : in  std_logic;
+       i_MEMREAD  : in  std_logic;
        i_ADDRESS  : in  std_logic_vector(31 downto 0);
        i_IN       : in  std_logic_vector(31 downto 0);
        o_OUT      : out std_logic_vector(31 downto 0));
