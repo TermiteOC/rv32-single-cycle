@@ -20,7 +20,6 @@ suporte: beq, lw, sw,
 
 
 vcom -2008 datapath/banco-de-registradores/*.vhd
-vcom -2008 datapath/somador/*.vhd
 vcom -2008 datapath/ula/*.vhd
 vcom -2008 datapath/*.vhd
 vcom -2008 controlador/*.vhd
