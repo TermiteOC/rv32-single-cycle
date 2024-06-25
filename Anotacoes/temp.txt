@@ -20,10 +20,17 @@ suporte: beq, lw, sw,
 
 
 vcom -2008 datapath/banco-de-registradores/*.vhd
-vcom -2008 datapath/somador/*.vhd
 vcom -2008 datapath/ula/*.vhd
 vcom -2008 datapath/*.vhd
 vcom -2008 controlador/*.vhd
 vcom -2008 *.vhd
 vsim tb_rv32_top
 add wave *
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_PC_OUT
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_INST
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_READ1
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_READ2
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_IMM
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_WRITE_DATA
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_REGWRITE
+add wave -position end  sim:/tb_rv32_top/u_DUV/w_OP
