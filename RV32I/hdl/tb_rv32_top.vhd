@@ -43,31 +43,31 @@ begin
     
     w_RST <= '0';
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000001")
+    assert (w_ALU = "00000000000000000000000000000000")
     report "Fail @ 001" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000000")
+    assert (w_ALU = "00000000000000000000000000000001")
     report "Fail @ 002" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000101")
+    assert (w_ALU = "00000000000000000000000000000000")
     report "Fail @ 003" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000001010")
+    assert (w_ALU = "00000000000000000000000000000101")
     report "Fail @ 004" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000001111")
+    assert (w_ALU = "00000000000000000000000000001010")
     report "Fail @ 005" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000001")
+    assert (w_ALU = "00000000000000000000000000001111")
     report "Fail @ 006" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000000")
+    assert (w_ALU = "00000000000000000000000000000001")
     report "Fail @ 007" severity error;
     
     wait for 1 ns;
@@ -87,11 +87,11 @@ begin
     report "Fail @ 011" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000001001")
+    assert (w_ALU = "00000000000000000000000000000000")
     report "Fail @ 012" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000001")
+    assert (w_ALU = "00000000000000000000000000001001")
     report "Fail @ 013" severity error;
     
     wait for 1 ns;
@@ -99,15 +99,15 @@ begin
     report "Fail @ 014" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000000")
+    assert (w_ALU = "00000000000000000000000000000001")
     report "Fail @ 015" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000010")
+    assert (w_ALU = "00000000000000000000000000000000")
     report "Fail @ 016" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000100")
+    assert (w_ALU = "00000000000000000000000000000010")
     report "Fail @ 017" severity error;
     
     wait for 1 ns;
@@ -123,28 +123,32 @@ begin
     report "Fail @ 020" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000001000")
+    assert (w_ALU = "00000000000000000000000000000100")
     report "Fail @ 021" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000000")
+    assert (w_ALU = "00000000000000000000000000001000")
     report "Fail @ 022" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000010")
+    assert (w_ALU = "00000000000000000000000000000000")
     report "Fail @ 023" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "11111111111111111111111111111111")
+    assert (w_ALU = "00000000000000000000000000000010")
     report "Fail @ 024" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000001101")
+    assert (w_ALU = "11111111111111111111111111111111")
     report "Fail @ 025" severity error;
     
     wait for 1 ns;
-    assert (w_ALU = "00000000000000000000000000000000")
+    assert (w_ALU = "00000000000000000000000000001101")
     report "Fail @ 026" severity error;
+    
+    wait for 1 ns;
+    assert (w_ALU = "00000000000000000000000000000000")
+    report "Fail @ 027" severity error;
     
 	  -- Clear Inputs
     w_RST <= '0';

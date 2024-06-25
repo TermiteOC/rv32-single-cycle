@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ula_32bits
-Fri Jun 14 22:38:03 2024
+Tue Jun 25 18:15:33 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,10 +15,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "soma_subtrai_32bits:u_SOMA_SUBTRAI"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 14 22:38:03 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 25 18:15:33 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ula_32bits                                  ;
 ; Top-level Entity Name           ; ula                                         ;
@@ -168,24 +167,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; hdl/ula.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd                     ;         ;
-; hdl/soma_subtrai.vhd             ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/soma_subtrai.vhd            ;         ;
-; hdl/slt.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/slt.vhd                     ;         ;
-; hdl/seletor_ula.vhd              ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/seletor_ula.vhd             ;         ;
-; hdl/or.vhd                       ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/or.vhd                      ;         ;
-; hdl/nor.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/nor.vhd                     ;         ;
-; hdl/complemento.vhd              ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/complemento.vhd             ;         ;
-; hdl/and.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/and.vhd                     ;         ;
-; hdl/somador_completo_32bits.vhd  ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_32bits.vhd ;         ;
-; hdl/somador_completo_16bits.vhd  ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_16bits.vhd ;         ;
-; hdl/somador_completo_4bits.vhd   ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_4bits.vhd  ;         ;
-; hdl/somador_completo_1bit.vhd    ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_1bit.vhd   ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; hdl/ula.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd         ;         ;
+; hdl/somador.vhd                  ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador.vhd     ;         ;
+; hdl/subtrator.vhd                ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/subtrator.vhd   ;         ;
+; hdl/slt.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/slt.vhd         ;         ;
+; hdl/seletor_ula.vhd              ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/seletor_ula.vhd ;         ;
+; hdl/or.vhd                       ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/or.vhd          ;         ;
+; hdl/nor.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/nor.vhd         ;         ;
+; hdl/and.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/and.vhd         ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -193,14 +188,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 127            ;
+; Estimate of Logic utilization (ALMs needed) ; 108            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 186            ;
+; Combinational ALUT usage for logic          ; 159            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 66             ;
-;     -- 5 input functions                    ; 28             ;
-;     -- 4 input functions                    ; 26             ;
-;     -- <=3 input functions                  ; 65             ;
+;     -- 6 input functions                    ; 56             ;
+;     -- 5 input functions                    ; 14             ;
+;     -- 4 input functions                    ; 9              ;
+;     -- <=3 input functions                  ; 79             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 0              ;
 ;                                             ;                ;
@@ -209,59 +204,22 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; i_SEL[2]~input ;
-; Maximum fan-out                             ; 63             ;
-; Total fan-out                               ; 932            ;
-; Average fan-out                             ; 2.40           ;
+; Maximum fan-out                             ; 60             ;
+; Total fan-out                               ; 837            ;
+; Average fan-out                             ; 2.32           ;
 +---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                ;
-+------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; Compilation Hierarchy Node                                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                 ; Entity Name             ; Library Name ;
-+------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
-; |ula                                                       ; 186 (7)             ; 0 (0)                     ; 0                 ; 0          ; 101  ; 0            ; |ula                                                                                                                                                                                                                ; ula                     ; work         ;
-;    |seletor_ula:u_SELETOR|                                 ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|seletor_ula:u_SELETOR                                                                                                                                                                                          ; seletor_ula             ; work         ;
-;    |slt_32bits:u_SLT|                                      ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|slt_32bits:u_SLT                                                                                                                                                                                               ; slt_32bits              ; work         ;
-;    |soma_subtrai_32bits:u_SOMA_SUBTRAI|                    ; 69 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI                                                                                                                                                                             ; soma_subtrai_32bits     ; work         ;
-;       |complemento_32bits:u_COMPLEMENTO|                   ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|complemento_32bits:u_COMPLEMENTO                                                                                                                                            ; complemento_32bits      ; work         ;
-;       |somador_completo_32bits:u_SOMADOR_COMPLETO|         ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO                                                                                                                                  ; somador_completo_32bits ; work         ;
-;          |somador_completo_16bits:u_SOMADOR_COMPLETO0|     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0                                                                                      ; somador_completo_16bits ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;          |somador_completo_16bits:u_SOMADOR_COMPLETO1|     ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1                                                                                      ; somador_completo_16bits ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO0|   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO1|   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO1|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO2|   ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO2| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO2 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO2|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-;             |somador_completo_4bits:u_SOMADOR_COMPLETO3|   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3                                           ; somador_completo_4bits  ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO0 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO1 ; somador_completo_1bit   ; work         ;
-;                |somador_completo_1bit:u_SOMADOR_COMPLETO3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO1|somador_completo_4bits:u_SOMADOR_COMPLETO3|somador_completo_1bit:u_SOMADOR_COMPLETO3 ; somador_completo_1bit   ; work         ;
-+------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |ula                       ; 159 (16)            ; 0 (0)                     ; 0                 ; 0          ; 101  ; 0            ; |ula                       ; ula         ; work         ;
+;    |seletor_ula:u_SELETOR| ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|seletor_ula:u_SELETOR ; seletor_ula ; work         ;
+;    |slt_32bits:u_SLT|      ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|slt_32bits:u_SLT      ; slt_32bits  ; work         ;
+;    |subtrator:u_SUB|       ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ula|subtrator:u_SUB       ; subtrator   ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -280,22 +238,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 16:1               ; 31 bits   ; 310 LEs       ; 93 LEs               ; 217 LEs                ; No         ; |ula|seletor_ula:u_SELETOR|Mux0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "soma_subtrai_32bits:u_SOMA_SUBTRAI"                                                   ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; o_cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 16:1               ; 31 bits   ; 310 LEs       ; 93 LEs               ; 217 LEs                ; No         ; |ula|seletor_ula:u_SELETOR|Mux30 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -303,19 +252,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 186                         ;
+; arriav_lcell_comb     ; 159                         ;
+;     arith             ; 33                          ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 32                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 185                         ;
-;         2 data inputs ; 44                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 26                          ;
-;         5 data inputs ; 28                          ;
-;         6 data inputs ; 66                          ;
+;     normal            ; 125                         ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 56                          ;
 ; boundary_port         ; 101                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 10.65                       ;
+; Max LUT depth         ; 6.20                        ;
+; Average LUT depth     ; 5.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -324,7 +276,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -334,21 +286,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Jun 14 22:37:21 2024
+    Info: Processing started: Tue Jun 25 18:15:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ula_32bits -c ula_32bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/ula.vhd
     Info (12022): Found design unit 1: ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 12
     Info (12023): Found entity 1: ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/soma_subtrai.vhd
-    Info (12022): Found design unit 1: soma_subtrai_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/soma_subtrai.vhd Line: 12
-    Info (12023): Found entity 1: soma_subtrai_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/soma_subtrai.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_ula.vhd
+    Info (12022): Found design unit 1: tb_ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/tb_ula.vhd Line: 7
+    Info (12023): Found entity 1: tb_ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/tb_ula.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/somador.vhd
+    Info (12022): Found design unit 1: somador-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador.vhd Line: 11
+    Info (12023): Found entity 1: somador File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hdl/subtrator.vhd
+    Info (12022): Found design unit 1: subtrator-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/subtrator.vhd Line: 11
+    Info (12023): Found entity 1: subtrator File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/subtrator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/slt.vhd
     Info (12022): Found design unit 1: slt_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/slt.vhd Line: 11
     Info (12023): Found entity 1: slt_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/slt.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/seletor_ula.vhd
-    Info (12022): Found design unit 1: seletor_ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/seletor_ula.vhd Line: 14
+    Info (12022): Found design unit 1: seletor_ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/seletor_ula.vhd Line: 15
     Info (12023): Found entity 1: seletor_ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/seletor_ula.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/or.vhd
     Info (12022): Found design unit 1: or_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/or.vhd Line: 10
@@ -356,50 +314,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file hdl/or.
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/nor.vhd
     Info (12022): Found design unit 1: nor_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/nor.vhd Line: 10
     Info (12023): Found entity 1: nor_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/nor.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/complemento.vhd
-    Info (12022): Found design unit 1: complemento_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/complemento.vhd Line: 10
-    Info (12023): Found entity 1: complemento_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/complemento.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/and.vhd
     Info (12022): Found design unit 1: and_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/and.vhd Line: 10
     Info (12023): Found entity 1: and_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/and.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/somador_completo_32bits.vhd
-    Info (12022): Found design unit 1: somador_completo_32bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_32bits.vhd Line: 12
-    Info (12023): Found entity 1: somador_completo_32bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_32bits.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/somador_completo_16bits.vhd
-    Info (12022): Found design unit 1: somador_completo_16bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_16bits.vhd Line: 12
-    Info (12023): Found entity 1: somador_completo_16bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_16bits.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/somador_completo_4bits.vhd
-    Info (12022): Found design unit 1: somador_completo_4bits-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_4bits.vhd Line: 12
-    Info (12023): Found entity 1: somador_completo_4bits File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_4bits.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/somador_completo_1bit.vhd
-    Info (12022): Found design unit 1: somador_completo_1bit-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_1bit.vhd Line: 12
-    Info (12023): Found entity 1: somador_completo_1bit File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_1bit.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_ula.vhd
-    Info (12022): Found design unit 1: tb_ula-arq_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/tb_ula.vhd Line: 7
-    Info (12023): Found entity 1: tb_ula File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/tb_ula.vhd Line: 4
 Info (12127): Elaborating entity "ula" for the top level hierarchy
-Info (12128): Elaborating entity "and_32bits" for hierarchy "and_32bits:u_AND" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 60
-Info (12128): Elaborating entity "or_32bits" for hierarchy "or_32bits:u_OR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 64
-Info (12128): Elaborating entity "soma_subtrai_32bits" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 68
-Info (12128): Elaborating entity "complemento_32bits" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI|complemento_32bits:u_COMPLEMENTO" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/soma_subtrai.vhd Line: 31
-Info (12128): Elaborating entity "somador_completo_32bits" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/soma_subtrai.vhd Line: 35
-Info (12128): Elaborating entity "somador_completo_16bits" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_32bits.vhd Line: 25
-Info (12128): Elaborating entity "somador_completo_4bits" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_16bits.vhd Line: 25
-Info (12128): Elaborating entity "somador_completo_1bit" for hierarchy "soma_subtrai_32bits:u_SOMA_SUBTRAI|somador_completo_32bits:u_SOMADOR_COMPLETO|somador_completo_16bits:u_SOMADOR_COMPLETO0|somador_completo_4bits:u_SOMADOR_COMPLETO0|somador_completo_1bit:u_SOMADOR_COMPLETO0" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/somador_completo_4bits.vhd Line: 24
-Info (12128): Elaborating entity "slt_32bits" for hierarchy "slt_32bits:u_SLT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 73
-Info (12128): Elaborating entity "nor_32bits" for hierarchy "nor_32bits:u_NOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 77
-Info (12128): Elaborating entity "seletor_ula" for hierarchy "seletor_ula:u_SELETOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 81
+Info (12128): Elaborating entity "and_32bits" for hierarchy "and_32bits:u_AND" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 65
+Info (12128): Elaborating entity "or_32bits" for hierarchy "or_32bits:u_OR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 69
+Info (12128): Elaborating entity "somador" for hierarchy "somador:u_SOMA" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 73
+Info (12128): Elaborating entity "subtrator" for hierarchy "subtrator:u_SUB" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 77
+Info (12128): Elaborating entity "slt_32bits" for hierarchy "slt_32bits:u_SLT" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 81
+Info (12128): Elaborating entity "nor_32bits" for hierarchy "nor_32bits:u_NOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 85
+Info (12128): Elaborating entity "seletor_ula" for hierarchy "seletor_ula:u_SELETOR" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/ula/hdl/ula.vhd Line: 89
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 287 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 68 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 186 logic cells
+    Info (21061): Implemented 159 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Fri Jun 14 22:38:03 2024
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:56
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Tue Jun 25 18:15:33 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:53
 
 

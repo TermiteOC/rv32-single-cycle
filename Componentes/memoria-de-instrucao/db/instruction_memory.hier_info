@@ -1,14 +1,14 @@
 |instruction_memory
-i_ADDR[0] => w_MEM.RADDR
-i_ADDR[1] => w_MEM.RADDR1
-i_ADDR[2] => w_MEM.RADDR2
-i_ADDR[3] => w_MEM.RADDR3
-i_ADDR[4] => w_MEM.RADDR4
-i_ADDR[5] => w_MEM.RADDR5
-i_ADDR[6] => w_MEM.RADDR6
-i_ADDR[7] => w_MEM.RADDR7
-i_ADDR[8] => ~NO_FANOUT~
-i_ADDR[9] => ~NO_FANOUT~
+i_ADDR[0] => ~NO_FANOUT~
+i_ADDR[1] => ~NO_FANOUT~
+i_ADDR[2] => w_MEM.RADDR
+i_ADDR[3] => w_MEM.RADDR1
+i_ADDR[4] => w_MEM.RADDR2
+i_ADDR[5] => w_MEM.RADDR3
+i_ADDR[6] => w_MEM.RADDR4
+i_ADDR[7] => w_MEM.RADDR5
+i_ADDR[8] => w_MEM.RADDR6
+i_ADDR[9] => w_MEM.RADDR7
 i_ADDR[10] => ~NO_FANOUT~
 i_ADDR[11] => ~NO_FANOUT~
 i_ADDR[12] => ~NO_FANOUT~

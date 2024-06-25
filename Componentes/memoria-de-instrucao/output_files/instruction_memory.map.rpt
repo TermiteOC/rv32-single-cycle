@@ -1,5 +1,5 @@
 Analysis & Synthesis report for instruction_memory
-Sun Jun 16 17:24:27 2024
+Tue Jun 25 17:59:20 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 16 17:24:27 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 25 17:59:19 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; instruction_memory                          ;
 ; Top-level Entity Name           ; instruction_memory                          ;
@@ -180,14 +180,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimate of Logic utilization (ALMs needed) ; 12      ;
+; Estimate of Logic utilization (ALMs needed) ; 22      ;
 ;                                             ;         ;
 ; Combinational ALUT usage for logic          ; 23      ;
 ;     -- 7 input functions                    ; 0       ;
-;     -- 6 input functions                    ; 0       ;
-;     -- 5 input functions                    ; 4       ;
-;     -- 4 input functions                    ; 11      ;
-;     -- <=3 input functions                  ; 8       ;
+;     -- 6 input functions                    ; 21      ;
+;     -- 5 input functions                    ; 1       ;
+;     -- 4 input functions                    ; 0       ;
+;     -- <=3 input functions                  ; 1       ;
 ;                                             ;         ;
 ; Dedicated logic registers                   ; 0       ;
 ;                                             ;         ;
@@ -196,9 +196,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0       ;
 ;                                             ;         ;
 ; Maximum fan-out node                        ; w_MEM~0 ;
-; Maximum fan-out                             ; 14      ;
-; Total fan-out                               ; 163     ;
-; Average fan-out                             ; 1.08    ;
+; Maximum fan-out                             ; 22      ;
+; Total fan-out                               ; 228     ;
+; Average fan-out                             ; 1.51    ;
 +---------------------------------------------+---------+
 
 
@@ -235,13 +235,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 24                          ;
 ;     normal            ; 24                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;         4 data inputs ; 11                          ;
-;         5 data inputs ; 4                           ;
+;         3 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 21                          ;
 ; boundary_port         ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.94                        ;
+; Average LUT depth     ; 1.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -250,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -260,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 16 17:23:51 2024
+    Info: Processing started: Tue Jun 25 17:58:45 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off instruction_memory -c instruction_memory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -276,23 +276,12 @@ Info (276014): Found 1 instances of uninferred RAM logic
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_OUT[2]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
     Warning (13410): Pin "o_OUT[3]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[6]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[12]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[13]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[14]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[23]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[25]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[26]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[27]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[28]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[29]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
-    Warning (13410): Pin "o_OUT[31]" is stuck at GND File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 24 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_ADDR[8]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
-    Warning (15610): No output dependent on input pin "i_ADDR[9]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
+    Warning (15610): No output dependent on input pin "i_ADDR[0]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
+    Warning (15610): No output dependent on input pin "i_ADDR[1]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
     Warning (15610): No output dependent on input pin "i_ADDR[10]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
     Warning (15610): No output dependent on input pin "i_ADDR[11]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
     Warning (15610): No output dependent on input pin "i_ADDR[12]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-instrucao/hdl/instruction_memory.vhd Line: 6
@@ -319,10 +308,10 @@ Info (21057): Implemented 87 device resources after synthesis - the final resour
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 23 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Sun Jun 16 17:24:27 2024
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:54
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Tue Jun 25 17:59:20 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:02
 
 

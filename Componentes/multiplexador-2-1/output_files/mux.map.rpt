@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux
-Thu Jun 13 23:17:46 2024
+Tue Jun 25 18:00:29 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 13 23:17:46 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 25 18:00:29 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mux                                         ;
 ; Top-level Entity Name           ; mux                                         ;
@@ -166,13 +166,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; hdl/mux.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/mux.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; hdl/mux.vhd                      ; yes             ; User VHDL File  ; C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/mux.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -247,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -257,17 +257,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 13 23:17:15 2024
+    Info: Processing started: Tue Jun 25 18:00:04 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux -c mux
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/tb_mux.vhd
-    Info (12022): Found design unit 1: tb_mux-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/tb_mux.vhd Line: 7
-    Info (12023): Found entity 1: tb_mux File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/tb_mux.vhd Line: 4
-Warning (12090): Entity "mux" obtained from "hdl/mux.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/mux.vhd Line: 4
+    Info (12022): Found design unit 1: tb_mux-arch_1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/tb_mux.vhd Line: 7
+    Info (12023): Found entity 1: tb_mux File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/tb_mux.vhd Line: 4
+Warning (12090): Entity "mux" obtained from "hdl/mux.vhd" instead of from Quartus Prime megafunction library File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/mux.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/mux.vhd
-    Info (12022): Found design unit 1: mux-arq1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/mux.vhd Line: 11
-    Info (12023): Found entity 1: mux File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/mux-2-1/hdl/mux.vhd Line: 4
+    Info (12022): Found design unit 1: mux-arq1 File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/mux.vhd Line: 11
+    Info (12023): Found entity 1: mux File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/multiplexador-2-1/hdl/mux.vhd Line: 4
 Info (12127): Elaborating entity "mux" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -277,9 +277,9 @@ Info (21057): Implemented 129 device resources after synthesis - the final resou
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Thu Jun 13 23:17:46 2024
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Tue Jun 25 18:00:29 2024
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:53
 
 

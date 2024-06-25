@@ -1,5 +1,5 @@
 Flow report for mux
-Thu Jun 13 23:17:46 2024
+Tue Jun 25 18:00:29 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Jun 13 23:17:46 2024       ;
+; Flow Status                     ; Successful - Tue Jun 25 18:00:29 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mux                                         ;
 ; Top-level Entity Name           ; mux                                         ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/13/2024 23:17:16 ;
+; Start date & time ; 06/25/2024 18:00:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mux                 ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 110073157094848.171833143609376        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 110073157094848.171934920504324        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -98,8 +98,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4847 MB             ; 00:00:55                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4846 MB             ; 00:00:53                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

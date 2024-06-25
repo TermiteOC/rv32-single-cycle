@@ -2,58 +2,63 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity ula is
-port ( i_A    : in  std_logic_vector (31 downto 0);  -- entrada A
-       i_B    : in  std_logic_vector (31 downto 0);  -- entrada B
-       i_SEL  : in  std_logic_vector (3  downto 0);  -- seletor de operação
-		   o_ZERO : out std_logic;                       -- saída flag zero
-       o_ULA  : out std_logic_vector (31 downto 0)); -- saída resultado
+port ( i_A    : in  std_logic_vector(31 downto 0);
+       i_B    : in  std_logic_vector(31 downto 0);
+       i_SEL  : in  std_logic_vector(3  downto 0);
+		   o_ZERO : out std_logic;
+       o_ULA  : out std_logic_vector(31 downto 0));
 end ula;
 
 architecture arq_1 of ula is
   component and_32bits is
-  port ( i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
-	       i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
-         o_AND : out std_logic_vector (31 downto 0)); -- saída resultado and_32bits
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+	       i_B   : in  std_logic_vector(31 downto 0);
+         o_AND : out std_logic_vector(31 downto 0));
   end component;
 
   component or_32bits is
-  port ( i_A  : in  std_logic_vector (31 downto 0);  -- entrada A
-	       i_B  : in  std_logic_vector (31 downto 0);  -- entrada B
-         o_OR : out std_logic_vector (31 downto 0)); -- saída resultado or_32bits
+  port ( i_A  : in  std_logic_vector(31 downto 0);
+	       i_B  : in  std_logic_vector(31 downto 0);
+         o_OR : out std_logic_vector(31 downto 0));
   end component;
 
-  component soma_subtrai_32bits is
-  port ( i_A            : in  std_logic_vector (31 downto 0);  -- entrada A
-         i_B            : in  std_logic_vector (31 downto 0);  -- entrada B
-         i_SUBTRAIR     : in  std_logic;                       -- entrada =0 soma normal, =1 faz o complemento de 2 e subtrai
-         o_COUT         : out std_logic;                       -- saída carry out
-         o_SOMA_SUBTRAI : out std_logic_vector (31 downto 0)); -- saída resultado
+  component somador is
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+         i_B   : in  std_logic_vector(31 downto 0);
+         o_OUT : out std_logic_vector(31 downto 0));
+  end component;
+  
+  component subtrator is
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+         i_B   : in  std_logic_vector(31 downto 0);
+         o_OUT : out std_logic_vector(31 downto 0));
   end component;
 
   component slt_32bits is
-  port ( i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
-	       i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
-         o_SLT : out std_logic_vector (31 downto 0)); -- saída resultado slt_32bits
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+	       i_B   : in  std_logic_vector(31 downto 0);
+         o_SLT : out std_logic_vector(31 downto 0));
   end component;
 
   component nor_32bits is
-  port ( i_A   : in  std_logic_vector (31 downto 0);  -- entrada A
-	       i_B   : in  std_logic_vector (31 downto 0);  -- entrada B
-         o_NOR : out std_logic_vector (31 downto 0)); -- saída resultado nor_32bits
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+	       i_B   : in  std_logic_vector(31 downto 0);
+         o_NOR : out std_logic_vector(31 downto 0));
   end component;
 
 
   component seletor_ula is
-  port ( i_AND          : in  std_logic_vector (31 downto 0);  -- entrada resultado AND
-         i_OR           : in  std_logic_vector (31 downto 0);  -- entrada resultado OR
-         i_ADD_SUBTRACT : in  std_logic_vector (31 downto 0);  -- entrada resultado ADD/SUBTRACT
-         i_SLT          : in  std_logic_vector (31 downto 0);  -- entrada resultado SET LESS THAN
-         i_NOR          : in  std_logic_vector (31 downto 0);  -- entrada resultado NOR
-	       i_SELETOR      : in  std_logic_vector (3  downto 0);  -- entrada seletor
-         o_RESULTADO    : out std_logic_vector (31 downto 0)); -- saída resultado
+  port ( i_AND       : in  std_logic_vector (31 downto 0);
+         i_OR        : in  std_logic_vector (31 downto 0);
+         i_ADD       : in  std_logic_vector (31 downto 0);
+         i_SUB       : in  std_logic_vector (31 downto 0);
+         i_SLT       : in  std_logic_vector (31 downto 0);
+         i_NOR       : in  std_logic_vector (31 downto 0);
+         i_SELETOR   : in  std_logic_vector (3  downto 0);
+         o_RESULTADO : out std_logic_vector (31 downto 0));
   end component;
   
-  signal w_0, w_1, w_2, w_3, w_4, w_ULA : std_logic_vector (31 downto 0);
+  signal w_0, w_1, w_2, w_3, w_4, w_5, w_ULA : std_logic_vector(31 downto 0);
 
 begin
   -- Instâncias dos componentes
@@ -64,27 +69,31 @@ begin
   u_OR : or_32bits port map ( i_A  => i_A,
                               i_B  => i_B,
                               o_OR => w_1);
-									  
-  u_SOMA_SUBTRAI : soma_subtrai_32bits port map ( i_A            => i_A,
-                                                  i_B            => i_B,
-                                                  i_SUBTRAIR     => i_SEL(2),
-                                                  o_SOMA_SUBTRAI => w_2);
+                              
+  u_SOMA : somador port map ( i_A   => i_A,
+                              i_B   => i_B,
+                              o_OUT => w_2);
+                              
+  u_SUB : subtrator port map ( i_A   => i_A,
+                               i_B   => i_B,
+                               o_OUT => w_3);
 																 															 
   u_SLT : slt_32bits port map ( i_A   => i_A,
                                 i_B   => i_B,
-                                o_SLT => w_3);																 																 
+                                o_SLT => w_4);																 																 
 																  
   u_NOR : nor_32bits port map ( i_A   => i_A,
                                 i_B   => i_B,
-                                o_NOR => w_4);
+                                o_NOR => w_5);
 
-  u_SELETOR : seletor_ula port map ( i_AND          => w_0,
-														         i_OR           => w_1,
-														         i_ADD_SUBTRACT => w_2,
-														         i_SLT          => w_3,
-														         i_NOR          => w_4,
-														         i_SELETOR      => i_SEL,
-														         o_RESULTADO    => W_ULA);
+  u_SELETOR : seletor_ula port map ( i_AND       => w_0,
+														         i_OR        => w_1,
+														         i_ADD       => w_2,
+                                     i_SUB       => w_3,
+														         i_SLT       => w_4,
+														         i_NOR       => w_5,
+														         i_SELETOR   => i_SEL,
+														         o_RESULTADO => W_ULA);
 																										
   process(w_ULA) 
   begin

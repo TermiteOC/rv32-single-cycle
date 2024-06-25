@@ -1,5 +1,5 @@
 Analysis & Synthesis report for datamemory
-Thu Jun 13 23:04:50 2024
+Tue Jun 25 17:57:57 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 13 23:04:49 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 25 17:57:57 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; datamemory                                  ;
 ; Top-level Entity Name           ; data_memory                                 ;
@@ -163,7 +163,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -254,7 +254,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -264,7 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun 13 23:03:21 2024
+    Info: Processing started: Tue Jun 25 17:57:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datamemory -c datamemory
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -282,8 +282,8 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 24 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_MEMREAD" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 8
-    Warning (15610): No output dependent on input pin "i_ADDRESS[9]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
-    Warning (15610): No output dependent on input pin "i_ADDRESS[10]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[0]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
+    Warning (15610): No output dependent on input pin "i_ADDRESS[1]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
     Warning (15610): No output dependent on input pin "i_ADDRESS[11]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
     Warning (15610): No output dependent on input pin "i_ADDRESS[12]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
     Warning (15610): No output dependent on input pin "i_ADDRESS[13]" File: C:/Users/Levy/Downloads/Coding/Hardware Description/VHDL/rv32-single-cycle/Componentes/memoria-de-dados/hdl/data_memory.vhd Line: 9
@@ -310,9 +310,9 @@ Info (21057): Implemented 22507 device resources after synthesis - the final res
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 22408 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4926 megabytes
-    Info: Processing ended: Thu Jun 13 23:04:51 2024
-    Info: Elapsed time: 00:01:30
-    Info: Total CPU time (on all processors): 00:01:20
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Tue Jun 25 17:57:57 2024
+    Info: Elapsed time: 00:00:52
+    Info: Total CPU time (on all processors): 00:01:16
 
 

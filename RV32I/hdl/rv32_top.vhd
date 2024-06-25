@@ -21,12 +21,10 @@ architecture arch_1 of rv32_top is
          o_READ_DATA2 : out std_logic_vector(31 downto 0));
   end component;
   
-  component somador_completo_32bits is
-  port ( i_A                : in  std_logic_vector(31 downto 0);
-         i_B                : in  std_logic_vector(31 downto 0);
-         i_CIN              : in  std_logic;
-         o_COUT             : out std_logic;
-         o_SOMADOR_COMPLETO : out std_logic_vector(31 downto 0));
+  component somador is
+  port ( i_A   : in  std_logic_vector(31 downto 0);
+         i_B   : in  std_logic_vector(31 downto 0);
+         o_OUT : out std_logic_vector(31 downto 0));
   end component;
   
   component ula is
@@ -118,9 +116,6 @@ architecture arch_1 of rv32_top is
   signal w_OP       : std_logic_vector(3 downto 0);
   signal w_ZERO     : std_logic;
   
-  signal w_UNUSED1 : std_logic;
-  signal w_UNUSED2 : std_logic_vector(31 downto 0);
-  
 begin
   -- Instancias de Componentes
   u_PC: reg port map ( i_RST => i_RST,
@@ -180,20 +175,16 @@ begin
                                i_B	 => w_DATA,
                                o_OUT => w_WRITE_DATA);
 
-  u_ADDER_4: somador_completo_32bits port map ( i_A                => w_PC_OUT,
-                                                i_B                => "00000000000000000000000000000100",
-                                                i_CIN              => '0',
-                                                o_COUT             => w_UNUSED1,
-                                                o_SOMADOR_COMPLETO => w_PC4);
+  u_ADDER_4: somador port map ( i_A   => w_PC_OUT,
+                                i_B   => "00000000000000000000000000000100",
+                                o_OUT => w_PC4);
 
   u_SHIFT: shift_left port map ( i_DATA   => w_IMM,
                                  o_RESULT => w_SHIFT);
 
-  u_ADDER_BRANCH: somador_completo_32bits port map ( i_A                => w_PC_OUT,
-                                                     i_B                => w_SHIFT,
-                                                     i_CIN              => '0',
-                                                     o_COUT             => w_UNUSED1,
-                                                     o_SOMADOR_COMPLETO => w_BRANCHED);
+  u_ADDER_BRANCH: somador port map ( i_A   => w_PC_OUT,
+                                     i_B   => w_SHIFT,
+                                     o_OUT => w_BRANCHED);
 
   u_MUX_BRANCH: mux port map ( i_SEL => w_BRANCH and w_ZERO,
                                i_A	 => w_PC4,

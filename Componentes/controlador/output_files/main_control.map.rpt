@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_control
-Sun Jun 16 18:25:07 2024
+Tue Jun 25 17:50:04 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jun 16 18:25:07 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 25 17:50:04 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; main_control                                ;
 ; Top-level Entity Name           ; main_control                                ;
@@ -180,13 +180,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 4             ;
+; Estimate of Logic utilization (ALMs needed) ; 6             ;
 ;                                             ;               ;
-; Combinational ALUT usage for logic          ; 7             ;
+; Combinational ALUT usage for logic          ; 9             ;
 ;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 1             ;
+;     -- 6 input functions                    ; 2             ;
 ;     -- 5 input functions                    ; 0             ;
-;     -- 4 input functions                    ; 4             ;
+;     -- 4 input functions                    ; 5             ;
 ;     -- <=3 input functions                  ; 2             ;
 ;                                             ;               ;
 ; Dedicated logic registers                   ; 0             ;
@@ -196,9 +196,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; i_OP[5]~input ;
-; Maximum fan-out                             ; 5             ;
-; Total fan-out                               ; 49            ;
-; Average fan-out                             ; 1.32          ;
+; Maximum fan-out                             ; 6             ;
+; Total fan-out                               ; 59            ;
+; Average fan-out                             ; 1.51          ;
 +---------------------------------------------+---------------+
 
 
@@ -207,7 +207,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |main_control              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |main_control       ; main_control ; work         ;
+; |main_control              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |main_control       ; main_control ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,15 +232,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 7                           ;
-;     normal            ; 7                           ;
+; arriav_lcell_comb     ; 9                           ;
+;     normal            ; 9                           ;
 ;         2 data inputs ; 2                           ;
-;         4 data inputs ; 4                           ;
-;         6 data inputs ; 1                           ;
+;         4 data inputs ; 5                           ;
+;         6 data inputs ; 2                           ;
 ; boundary_port         ; 15                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.93                        ;
+; Average LUT depth     ; 1.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -259,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 16 18:22:45 2024
+    Info: Processing started: Tue Jun 25 17:49:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_control -c main_control
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -273,14 +273,14 @@ Info (12127): Elaborating entity "main_control" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 7 logic cells
+    Info (21061): Implemented 9 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Sun Jun 16 18:25:07 2024
-    Info: Elapsed time: 00:02:22
-    Info: Total CPU time (on all processors): 00:01:01
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Tue Jun 25 17:50:04 2024
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:53
 
 

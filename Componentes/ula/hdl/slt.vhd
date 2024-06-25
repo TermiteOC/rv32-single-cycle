@@ -10,7 +10,7 @@ end slt_32bits;
  
 architecture arq_1 of slt_32bits is
 begin
-  process (i_A, i_B)
+  process(i_A, i_B)
   begin
     if (signed(i_A) < signed(i_B)) then
       o_SLT <= (others => '0');

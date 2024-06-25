@@ -21,9 +21,8 @@ begin
       o_IMM(11 downto 0)  <= i_INST(31 downto 25) & i_INST(11 downto 7);
     -- Tipo B
     elsif i_INST(6 downto 0) = "1100011" then
-      o_IMM(31 downto 13) <= (others => i_INST(31));
-      o_IMM(12 downto 1)  <= i_INST(31) & i_INST(7) & i_INST(30 downto 25) & i_INST(11 downto 8);
-      o_IMM(0)            <= '0';
+      o_IMM(31 downto 12) <= (others => i_INST(31));
+      o_IMM(11 downto 0)  <= i_INST(31) & i_INST(7) & i_INST(30 downto 25) & i_INST(11 downto 8);
     -- Tipo U
     elsif i_INST(6 downto 0) = "0110111" or i_INST(6 downto 0) = "0010111" then
       o_IMM(31 downto 12) <= i_INST(31 downto 12);

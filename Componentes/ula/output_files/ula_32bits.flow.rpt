@@ -1,5 +1,5 @@
 Flow report for ula_32bits
-Fri Jun 14 22:38:03 2024
+Tue Jun 25 18:15:33 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Jun 14 22:38:03 2024       ;
+; Flow Status                     ; Successful - Tue Jun 25 18:15:33 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ula_32bits                                  ;
 ; Top-level Entity Name           ; ula                                         ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/14/2024 22:37:22 ;
+; Start date & time ; 06/25/2024 18:15:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ula_32bits          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073157094848.171841544206340        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073157094848.171935011009344        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ula         ; Top        ;
@@ -97,8 +97,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 4853 MB             ; 00:00:55                           ;
-; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4841 MB             ; 00:00:53                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

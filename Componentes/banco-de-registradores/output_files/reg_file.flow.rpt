@@ -1,5 +1,5 @@
 Flow report for reg_file
-Sat Jun 15 19:21:21 2024
+Tue Jun 25 18:19:21 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun 15 19:21:20 2024       ;
+; Flow Status                     ; Successful - Tue Jun 25 18:19:21 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; reg_file                                    ;
 ; Top-level Entity Name           ; reg_file                                    ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/15/2024 19:20:36 ;
+; Start date & time ; 06/25/2024 18:18:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; reg_file            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 110073157094848.171849003607252        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 110073157094848.171935033410616        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,8 +96,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4861 MB             ; 00:00:58                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:00:58                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4859 MB             ; 00:00:57                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

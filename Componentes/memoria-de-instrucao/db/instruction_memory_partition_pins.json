@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_OUT[6]",
+					"strict" : false
+				},
+				{
 					"name" : "o_OUT[7]",
 					"strict" : false
 				},
@@ -37,6 +41,18 @@
 				},
 				{
 					"name" : "o_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[14]",
 					"strict" : false
 				},
 				{
@@ -72,7 +88,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_OUT[23]",
+					"strict" : false
+				},
+				{
 					"name" : "o_OUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "o_OUT[29]",
 					"strict" : false
 				},
 				{
@@ -80,11 +120,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_ADDR[0]",
+					"name" : "o_OUT[31]",
 					"strict" : false
 				},
 				{
-					"name" : "i_ADDR[1]",
+					"name" : "i_ADDR[6]",
 					"strict" : false
 				},
 				{
@@ -104,11 +144,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "i_ADDR[6]",
+					"name" : "i_ADDR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "i_ADDR[7]",
+					"name" : "i_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_ADDR[9]",
 					"strict" : false
 				}
 			]
